@@ -9,13 +9,20 @@ import { Response } from '@angular/http';
 
 export class SearchComponent implements OnInit {
 
-  message:string;
+  message:object;
   displaydata:any;
   rd:any = [];
   query:string;
   demo = [];
   more = [];
   constructor(private data:DataService) { 
+
+    this.data.currentMessage.subscribe(message => {
+      this.displaydata = message;
+      this.rd.push(this.displaydata.otherdata);
+      this.query = this.displaydata.question;
+    
+    })
   }
 
   search(query) {
@@ -23,11 +30,12 @@ export class SearchComponent implements OnInit {
     this.data.getData(query).subscribe(
       (response:Response)=>{
         this.displaydata = response.json()[0];
+        console.log("before",this.rd);
         this.rd = [];
         this.more = [];
         this.rd.push(this.displaydata.otherdata.related_document)
         this.more.push(this.displaydata.otherdata.more_details)
-        console.log("search",this.more);
+        console.log("after",this.rd);
       },
       (error)=>{
         console.log(error);
@@ -35,19 +43,15 @@ export class SearchComponent implements OnInit {
     )
   }
 
-
   helpWindow(event) {
     window.open('https://www.google.com', '_blank', 'location=yes,height=10244,width=1021,scrollbars=yes,status=yes');
   }
   ngOnInit() {
-    this.data.currentMessage.subscribe(message => {
-      this.displaydata = message;
-      this.query = this.displaydata.question;
-      this.rd = [];
-      this.demo.push(this.displaydata.otherdata);
-      // this.rd.push(this.demo);
-      console.log("ngInit",this.demo[1]);
-    })
+    // console.log(this.rd[1])
+    // this.data.currentMessage.subscribe(message => {
+    //   this.displaydata = message;
+    //   this.query = this.displaydata.question;
+    // })
   }
 
 }
