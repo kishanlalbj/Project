@@ -1,7 +1,15 @@
 <nav-bar> </nav-bar>
 
+<!-- 
+<div class="row" id="searchbox" align="center">
+		<div class="container">
+			<input type="text" class="form-control" [(ngModel)]="searchtext">
+			<button id="searchbtn" class="btn btn-primary" (click)="search()">Search</button>
+		</div>
+</div> -->
+
 <div>
-		<router-outlet (deactivate)= "onDeactivate()" ></router-outlet>		
+		<router-outlet (deactivate)= "onDeactivate()"></router-outlet>		
 </div>
 
 

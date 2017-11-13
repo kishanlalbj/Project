@@ -1,0 +1,115 @@
+ {
+    "data" : [
+    {
+      "question": "abc",
+      "indent": "AllData",
+      "response_type": "TotalDepth",
+      "type": "Success",
+      "revelence_Score": "99.5",
+      "document":"210_30a-4X.pdf#page=6",
+      "resut":"124853.14m3",
+      "entity":"dummy",
+      "response_time":"245.25",
+      "otherdata":{
+        "filterdata":{
+          "A":"1",
+          "B":"2"
+        },
+        "related_document":["well report.pdf","canals.pdf","driller.pdf"],
+        "more_details":{
+          "author":"John Williams",
+          "updated":"Jum-12-2017"
+        }
+      }
+    },
+    {
+      "question":"How deep is the well 210/29c-5?",
+      "indent": "AllData",
+      "response_type": "TotalDepth",
+      "type": "success",
+      "revelence_Score": "28.5",
+      "document":"210_30a-4X.pdf#page=4",
+      "resut":"2548.89",
+      "entity":"",
+      "response_time":"",
+      "otherdata":{
+        "filterdata":{
+          "A":"1",
+          "B":"2"
+        },
+        "related_document":["report1.pdf","driller.pdf"],
+        "more_details":{
+          "C":"90",
+          "D":"12"
+        }
+      }
+    },
+    {
+      "question": "210/30a-4X is operated by?",
+      "indent": "AllData",
+      "response_type": "TotalDepth",
+      "type": "success",
+      "revelence_Score": "54.5",
+      "document":"",
+      "resut":"ABC corp",
+      "entity":"",
+      "response_time":"0.25sec",
+      "otherdata":{
+        "filterdata":{
+          "A":"1",
+          "B":"2"
+        },
+        "related_document":["rety.pdf","qwer.pdf"],
+        "more_details":{
+          "C":"90",
+          "D":"12"
+        }
+      }
+    },
+    {
+      "question": "Tell me the total depth of ABCD well?",
+      "indent": "AllData",
+      "response_type": "TotalDepth",
+      "type": "error",
+      "revelence_Score": "",
+      "document":"",
+      "resut":"7654m",
+      "entity":"",
+      "response_time":"",
+      "otherdata":{
+        "filterdata":{
+          "A":"1",
+          "B":"2"
+        },
+        "related_document":["rety.pdf","qwer.pdf"],
+        "more_details":{
+          "C":"90",
+          "D":"12"
+        }
+      }
+    },
+    {
+      "question": "Tell me the total depth of ABC well?",
+      "indent": "AllData",
+      "response_type": "TotalDepth",
+      "type": "error",
+      "revelence_Score": "10.5",
+      "document":"210_30a-4X.pdf#page=6",
+      "resut":"5468m",
+      "entity":"",
+      "response_time":"",
+      "otherdata":{
+        "filterdata":{
+          "A":"1",
+          "B":"2"
+        },
+        "related_document":["rety.pdf","qwer.pdf"],
+        "more_details":{
+          "C":"90",
+          "D":"12"
+        }
+      }
+    }
+   
+  ]
+}

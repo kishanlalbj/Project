@@ -10,17 +10,17 @@
               <form id="login-form"  role="form" style="display: block;">
                 <h2>LOGIN</h2>
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="text" name="username" id="username" tabindex="1" [(ngModel)]="username" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="password" tabindex="2" [(ngModel)]="password" class="form-control" placeholder="Password">
                   </div>
                   <!-- <div class="col-xs-6 form-group pull-left checkbox">
                     <input id="checkbox1" type="checkbox" name="remember">
                     <label for="checkbox1">Remember Me</label>
                   </div> -->
                   <div class="col-xs-6 form-group pull-right">
-                        <button name="login-submit" routerLink="/admin"  routerLinkActive="active"   tabindex="4" class="form-control btn btn-login" value="Log In">Login</button>
+                        <button name="login-submit"  routerLink="/home"  routerLinkActive="active"   tabindex="4" class="form-control btn btn-login" (click)="login(username,password)" value="Log In">Login</button>
                   </div>
               </form>
 
