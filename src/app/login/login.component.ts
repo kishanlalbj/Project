@@ -39,12 +39,12 @@ export class LoginComponent{
 
     if(username == this.user1_username && password == this.user1_password ) {
             
-                    this.router.navigate(['home'])
+                    this.router.navigate(['home']);
       }
 
       if(username == this.user2_username && password == this.user2_password ) {
         
-                this.router.navigate(['home'])
+                this.router.navigate(['home']);
   }
 
     

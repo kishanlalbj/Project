@@ -13,17 +13,15 @@ import { DataService } from './data.service';
 // import { HomeModule } from './home/home.module';
 import { SearchComponent } from './search/search.component';
 import { AdminComponent } from './admin/admin.component';
+// import { NewComponent } from './new/new.component';
 
 
 const routes: Routes = [
 { path: '', redirectTo: 'login', pathMatch: 'full' },
-{
-	 path: 'home', 
-	 component: HomeComponent
-},
-{ path: 'login',component:LoginComponent},
-{ path: 'home/search_results', component:SearchComponent },
-{ path: 'admin',component:AdminComponent}
+{ path: 'login',component:LoginComponent },
+{ path: 'home',component:HomeComponent },
+{ path: 'search',component:SearchComponent },
+{ path: 'admin',component:AdminComponent }
 ];
 
 @NgModule({
@@ -33,7 +31,8 @@ const routes: Routes = [
 	NavbarComponent,
 	HomeComponent,
 	SearchComponent,
-	AdminComponent
+	AdminComponent,
+	// NewComponent
 	],
 
 	imports: [

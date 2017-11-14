@@ -1,12 +1,8 @@
-#home {
-    padding-top:70px;
-    /* background-color: green; */
+ h1{
+    margin: auto;
 }
 
-#searchbox{
-    margin: 0 auto; 
-    margin-top:200px;
-}
-#searchbtn {
-    margin-top:3%;
+.search {
+    margin-left:25%;
+    margin-top:20%;
 }

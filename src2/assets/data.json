@@ -7,10 +7,8 @@
       "type": "Success",
       "revelence_Score": "99.5",
       "document":"210_30a-4X.pdf#page=6",
-      "resut":"The depth of the Well XYZ is 124853.14m",
-      "entity":{
-        "well_name":"210/30a-4X"
-      },
+      "resut":"124853.14m3",
+      "entity":"dummy",
       "response_time":"245.25",
       "otherdata":{
         "filterdata":{
@@ -20,7 +18,7 @@
         "related_document":["well report.pdf","canals.pdf","driller.pdf"],
         "more_details":{
           "author":"John Williams",
-          "updated":"Jun-12-2017"
+          "updated":"Jum-12-2017"
         }
       }
     },
@@ -47,44 +45,24 @@
       }
     },
     {
-      "question": "List down all wells which is operated by ABC Corp?",
+      "question": "210/30a-4X is operated by?",
       "indent": "AllData",
       "response_type": "TotalDepth",
       "type": "success",
       "revelence_Score": "54.5",
-      "document":"DOC4.POI.pdf#page7 ",
-      "resut":
-        [ 
-          {
-        "well_id":"KCL-E22",
-        "status":"Active",
-        "type":"Oil and Gas",
-        "operator":"ABC Corp"
-        },{
-          "well_id":"KCL-E23",
-          "status":"inactive",
-          "type":"Oil and Gas",
-          "operator":"ABC Corp"
-        },{
-          "well_id":"KCL-E24",
-          "status":"Active",
-          "type":"Oil and Gas",
-          "operator":"ABC Corp"
-        }
-        ],
-      "entity":{
-        "well_name":"KCL-12"
-      },
+      "document":"",
+      "resut":"ABC corp",
+      "entity":"",
       "response_time":"0.25sec",
       "otherdata":{
         "filterdata":{
-          "A":"Region",
-          "B":"Economy"
+          "A":"1",
+          "B":"2"
         },
         "related_document":["rety.pdf","qwer.pdf"],
         "more_details":{
-          "author":"George Bary ",
-          "updated":"12"
+          "C":"90",
+          "D":"12"
         }
       }
     },
