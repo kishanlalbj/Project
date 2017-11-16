@@ -1,0 +1,75 @@
+{
+    
+    "data":[ 
+        {
+            "Intent": 
+            {
+                "Type": 0.888888454437256
+            },
+            "Result": "The well 13/22a-B13 has the Type as Cyclic Steam, Oil & Gas, ", 
+            "Response_Type": "Structured Data",
+            "Response_Time": "",
+            "Type": "Success",
+            "Document": "",
+            "Question": "show me the type of 13/22a-B13?", 
+            "Entity": {
+                "WellName": "13/22a-B13"
+            }, 
+            "Other_Data": {
+                "Filter_data": {},
+                "Related_documents":
+                { 
+                    "Well_Report": "13_22a-B13.pdf",
+                    "Injection_Data": "13_22a-B13_Injection.xlsx",
+                    "Prodution_Data": "13_22a-B13_Production.xlsx",
+                    "Well_Design": "2900001_WellDesign.png", 
+                    "Well_Logs": "13_22a-B13.las"
+                },
+                
+                "More_Details": {
+                    "Field_Name": "Kern River",
+                    "Operator_Name":"Chevron U.S.A. Inc.", 
+                    "County_Name": "Kern"
+                }
+            }
+        },
+        
+        {
+            "Intent":
+            {
+                "WellHeader": 0.9586988925933839
+            }, 
+            "Result": {
+                "Well_Name": "13/22a-B13",
+                "Operator":"Chevron U.S.A. Inc.",
+                "Lease_Name": "",
+                "Status": "Active",
+                "Type": "Cyclic Steam, Oil & Gas, ",
+                "Spud_Date": "27-Dec-66",
+                "Total_Depth": 2486.0
+            }, 
+            "Response_Type": "Structured Data",
+            "Response_Time": "",
+            "Type": "Success",
+            "Document": "",
+            "Question": "show me the well header for 13/22a-B13?",
+            "Entity": {
+                "WellName": "13/22a-B13"
+            },
+            "Other_Data": {
+                "Filter_data": {},
+                "Related_documents": {
+                    "Well_Report": "13_22a-B13.pdf",
+                    "Injection_Data": "13_22a-B13_Injection.xlsx",
+                    "Prodution_Data": "13_22a-B13_Production.xlsx",
+                    "Well_Design": "2900001_WellDesign.png", "Well_Logs": "13_22a-B13.las"
+                }, 
+                "More_Details": {
+                    "Field_Name":"Kern River",
+                    "Operator_Name": "Chevron U.S.A. Inc.", 
+                    "County_Name": "Kern"}
+                }
+            }
+            
+        ]
+    }

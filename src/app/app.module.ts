@@ -9,7 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CsvgeneratorService } from "./csvgenerator.service";
-import { DataService } from './data.service'; 
+import { DataService } from './data.service';
 // import { HomeModule } from './home/home.module';
 import { SearchComponent } from './search/search.component';
 import { AdminComponent } from './admin/admin.component';

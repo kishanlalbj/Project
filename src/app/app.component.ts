@@ -23,4 +23,19 @@ export class AppComponent {
   constructor(private _http: Http,private dataservice:DataService) {
   }
 
+  search() {
+    console.log(this.searchtext);
+    this.dataservice.getData(this.searchtext).subscribe(
+      (response:Response)=>{
+        this.alldata = response.json()[0];
+        console.log(this.alldata);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    )
+  }
+
+
+
 }

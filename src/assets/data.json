@@ -1,137 +1,136 @@
- {
-    "data" : [
-    {
-      "question": "abc",
-      "indent": "AllData",
-      "response_type": "TotalDepth",
-      "type": "Success",
-      "revelence_Score": "99.5",
-      "document":"210_30a-4X.pdf#page=6",
-      "resut":"The depth of the Well XYZ is 124853.14m",
-      "entity":{
-        "well_name":"210/30a-4X"
-      },
-      "response_time":"245.25",
-      "otherdata":{
-        "filterdata":{
-          "A":"1",
-          "B":"2"
-        },
-        "related_document":["well report.pdf","canals.pdf","driller.pdf"],
-        "more_details":{
-          "author":"John Williams",
-          "updated":"Jun-12-2017"
-        }
-      }
-    },
-    {
-      "question":"How deep is the well 210/29c-5?",
-      "indent": "AllData",
-      "response_type": "TotalDepth",
-      "type": "success",
-      "revelence_Score": "28.5",
-      "document":"210_30a-4X.pdf#page=4",
-      "resut":"2548.89",
-      "entity":"",
-      "response_time":"",
-      "otherdata":{
-        "filterdata":{
-          "A":"1",
-          "B":"2"
-        },
-        "related_document":["report1.pdf","driller.pdf"],
-        "more_details":{
-          "C":"90",
-          "D":"12"
-        }
-      }
-    },
-    {
-      "question": "List down all wells which is operated by ABC Corp?",
-      "indent": "AllData",
-      "response_type": "TotalDepth",
-      "type": "success",
-      "revelence_Score": "54.5",
-      "document":"DOC4.POI.pdf#page7 ",
-      "resut":
-        [ 
-          {
-        "well_id":"KCL-E22",
-        "status":"Active",
-        "type":"Oil and Gas",
-        "operator":"ABC Corp"
-        },{
-          "well_id":"KCL-E23",
-          "status":"inactive",
-          "type":"Oil and Gas",
-          "operator":"ABC Corp"
-        },{
-          "well_id":"KCL-E24",
-          "status":"Active",
-          "type":"Oil and Gas",
-          "operator":"ABC Corp"
-        }
-        ],
-      "entity":{
-        "well_name":"KCL-12"
-      },
-      "response_time":"0.25sec",
-      "otherdata":{
-        "filterdata":{
-          "A":"Region",
-          "B":"Economy"
-        },
-        "related_document":["rety.pdf","qwer.pdf"],
-        "more_details":{
-          "author":"George Bary ",
-          "updated":"12"
-        }
-      }
-    },
-    {
-      "question": "Tell me the total depth of ABCD well?",
-      "indent": "AllData",
-      "response_type": "TotalDepth",
-      "type": "error",
-      "revelence_Score": "",
-      "document":"",
-      "resut":"7654m",
-      "entity":"",
-      "response_time":"",
-      "otherdata":{
-        "filterdata":{
-          "A":"1",
-          "B":"2"
-        },
-        "related_document":["rety.pdf","qwer.pdf"],
-        "more_details":{
-          "C":"90",
-          "D":"12"
-        }
-      }
-    },
-    {
-      "question": "Tell me the total depth of ABC well?",
-      "indent": "AllData",
-      "response_type": "TotalDepth",
-      "type": "error",
-      "revelence_Score": "10.5",
-      "document":"210_30a-4X.pdf#page=6",
-      "resut":"5468m",
-      "entity":"",
-      "response_time":"",
-      "otherdata":{
-        "filterdata":{
-          "A":"1",
-          "B":"2"
-        },
-        "related_document":["rety.pdf","qwer.pdf"],
-        "more_details":{
-          "C":"90",
-          "D":"12"
-        }
-      }
-    }
-   
-  ]
+{
+   "data" : [
+   {
+     "question": "abc",
+     "indent": "AllData",
+     "response_type": "TotalDepth",
+     "type": "Success",
+     "revelence_Score": "99.5",
+     "document":"210_30a-4X.pdf#page=6",
+     "resut":"The depth of the Well XYZ is 124853.14m",
+     "entity":{
+       "well_name":"210/30a-4X"
+     },
+     "response_time":"245.25",
+     "otherdata":{
+       "filterdata":{
+         "A":"1",
+         "B":"2"
+       },
+       "related_document":["well report.pdf","canals.pdf","driller.pdf"],
+       "more_details":{
+         "author":"John Williams",
+         "updated":"Jun-12-2017"
+       }
+     }
+   },
+   {
+     "question":"How deep is the well 210/29c-5?",
+     "indent": "AllData",
+     "response_type": "TotalDepth",
+     "type": "success",
+     "revelence_Score": "28.5",
+     "document":"210_30a-4X.pdf#page=4",
+     "resut":"2548.89",
+     "entity":"",
+     "response_time":"",
+     "otherdata":{
+       "filterdata":{
+         "A":"1",
+         "B":"2"
+       },
+       "related_document":["report1.pdf","driller.pdf"],
+       "more_details":{
+         "C":"90",
+         "D":"12"
+       }
+     }
+   },
+   {
+     "question": "xyz",
+     "indent": "AllData",
+     "response_type": "TotalDepth",
+     "type": "success",
+     "revelence_Score": "54.5",
+     "document":"DOC4.POI.pdf#page7 ",
+     "resut":
+       [
+         {
+       "well_id":"KCL-E22",
+       "status":"Active",
+       "type":"Oil and Gas",
+       "operator":"ABC Corp"
+       },{
+         "well_id":"KCL-E23",
+         "status":"inactive",
+         "type":"Oil and Gas",
+         "operator":"ABC Corp"
+       },{ 
+         "well_id":"KCL-E24",
+         "status":"Active",
+         "type":"Oil and Gas",
+         "operator":"ABC Corp"
+       }
+       ],
+     "entity":{
+       "well_name":"KCL-12"
+     },
+     "response_time":"0.25sec",
+     "otherdata":{
+       "filterdata":{
+         "A":"Region",
+         "B":"Economy"
+       },
+       "related_document":["rety.pdf","qwer.pdf"],
+       "more_details":{
+         "author":"George Bary ",
+         "updated":"12"
+       }
+     }
+   },
+   {
+     "question": "Tell me the total depth of ABCD well?",
+     "indent": "AllData",
+     "response_type": "TotalDepth",
+     "type": "error",
+     "revelence_Score": "",
+     "document":"",
+     "resut":"7654m",
+     "entity":"",
+     "response_time":"",
+     "otherdata":{
+       "filterdata":{
+         "A":"1",
+         "B":"2"
+       },
+       "related_document":["rety.pdf","qwer.pdf"],
+       "more_details":{
+         "C":"90",
+         "D":"12"
+       }
+     }
+   },
+   {
+     "question": "Tell me the total depth of ABC well?",
+     "indent": "AllData",
+     "response_type": "TotalDepth",
+     "type": "error",
+     "revelence_Score": "10.5",
+     "document":"210_30a-4X.pdf#page=6",
+     "resut":"5468m",
+     "entity":"",
+     "response_time":"",
+     "otherdata":{
+       "filterdata":{
+         "A":"1",
+         "B":"2"
+       },
+       "related_document":["rety.pdf","qwer.pdf"],
+       "more_details":{
+         "C":"90",
+         "D":"12"
+       }
+     }
+   }
+ ]
 }

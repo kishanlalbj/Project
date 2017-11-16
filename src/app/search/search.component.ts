@@ -19,12 +19,16 @@ export class SearchComponent implements OnInit ,OnDestroy {
   document:any;
   related_document:any;
   answer:any;
-  author:any;
-  updated_on:any;
-  entity:any;
-  res_type:any;
-  isTable:boolean = false;
   edited:boolean = false;
+  operator_name:any;
+  county_name:any;
+  more_details?:any;
+  field_name:any;
+  well_report :string;
+  production_data:string;
+  injection_data:string;
+  well_design:string;
+  well_logs:string;
   
   
   constructor(private dataservice:DataService,private ref: ChangeDetectorRef) { 
@@ -35,10 +39,20 @@ export class SearchComponent implements OnInit ,OnDestroy {
     console.log(question);
 
     this.dataservice.getData(question).subscribe((result:Response) =>{
-        this.result = result.json()[0];
-        this.answer = result.json()[0].resut;
-        this.res_type = typeof this.answer
 
+      console.log(result.json());
+        this.result = result.json()[0];
+        this.answer = result.json()[0].Result;
+
+        this.field_name = result.json()[0].Other_Data.More_Details.Field_Name;
+        this.operator_name = result.json()[0].Other_Data.More_Details.Operator_Name;
+        this.county_name = result.json()[0].Other_Data.More_Details.County_Name;
+  
+        this.well_report = result.json()[0].Other_Data.Related_documents.Well_Report;
+        this.production_data = result.json()[0].Other_Data.Related_documents.Prodution_Data;
+        this.injection_data = result.json()[0].Other_Data.Related_documents.Injection_Data;
+        this.well_design = result.json()[0].Other_Data.Related_documents.Well_Design;
+        this.well_logs = result.json()[0].Other_Data.Related_documents.Well_Logs;
 
         if(typeof this.answer == "string") {
           this.edited = false;
@@ -56,16 +70,10 @@ export class SearchComponent implements OnInit ,OnDestroy {
         }
 
 
-        console.log(this.answer[0].well_id);
-        this.document = result.json()[0].document;
-        this.related_document = [];
-        console.log("before",this.related_document);
-        this.related_document = this.related_document.slice();
-        this.related_document.push(result.json()[0].otherdata.related_document);
-        console.log(this.related_document);
-        this.author = result.json()[0].otherdata.more_details.author;
-        this.updated_on = result.json()[0].otherdata.more_details.updated;
-        this.entity = result.json()[0].entity;
+        // this.document = result.json()[0].document;
+        // this.related_document = [];
+        // this.related_document = this.related_document.slice();
+        // this.related_document.push(result.json()[0].otherdata.related_document);
     })
   }
   
@@ -81,10 +89,14 @@ export class SearchComponent implements OnInit ,OnDestroy {
   })    
   this.dataservice.getData(this.question).subscribe(
     (result:Response)=>{
+
+      console.log(result.json()[0]);
       this.result = result.json()[0];
-      this.answer = result.json()[0].resut;
-      this.document = result.json()[0].document;
-      this.related_document = [];
+      this.answer = result.json()[0].Result;
+      this.document = result.json()[0].Document;
+      this.more_details = result.json()[0].Other_Data.More_Details;
+      // this.related_document = result.json()[0].Other_Data;
+      // console.log( "*************************************",this.more_details.Other_Data);
       
       if(typeof this.answer == "string") {
         this.edited = false;
@@ -95,26 +107,28 @@ export class SearchComponent implements OnInit ,OnDestroy {
 
       if(this.edited === true) {
         console.log("Object")
-
-        for(let i=0;i<this.answer.length;i++) {
-          let obj = this.result[i];
-          for(let key in obj) {
-            console.log(key);
-          }
-        }
         
       }
       else {
         console.log("String");
       }
-      // console.log(this.answer);
-      this.related_document.push(result.json()[0].otherdata.related_document);
-      // console.log("Depre",this.related_document);
-      this.author = result.json()[0].otherdata.more_details.author;
-      this.updated_on = result.json()[0].otherdata.more_details.updated;
-      this.entity = result.json()[0].entity;
- 
-    }
+      this.more_details = this.result.Other_Data.More_Details;
+      console.log(this.more_details);
+      this.related_document = this.result.Other_Data.Related_documents;
+      console.log(this.related_document);
+
+      this.field_name = result.json()[0].Other_Data.More_Details.Field_Name;
+      this.operator_name = result.json()[0].Other_Data.More_Details.Operator_Name;
+      this.county_name = result.json()[0].Other_Data.More_Details.County_Name;
+
+      this.well_report = result.json()[0].Other_Data.Related_documents.Well_Report;
+      this.production_data = result.json()[0].Other_Data.Related_documents.Prodution_Data;
+      this.injection_data = result.json()[0].Other_Data.Related_documents.Injection_Data;
+      this.well_design = result.json()[0].Other_Data.Related_documents.Well_Design;
+      this.well_logs = result.json()[0].Other_Data.Related_documents.Well_Logs;
+      
+      
+   }
     )
 
   }

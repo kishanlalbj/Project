@@ -10,7 +10,7 @@ export class DataService {
 
   constructor(private http:Http) { }
 
-  // private subject = new Subject<any>();
+//   private subject = new Subject<any>();
   private subject = new BehaviorSubject({});
   
   getQuestion(): Observable<any> 
@@ -22,7 +22,7 @@ export class DataService {
       this.subject.next(user);
   }
   getData(question) {
-        return this.http.get('http://localhost:8080/data/?question='+question);
+        return this.http.get('http://localhost:8080/data/?Question='+question);
   }
 
 }

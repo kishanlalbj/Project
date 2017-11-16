@@ -26,9 +26,9 @@ export class HomeComponent implements OnInit  {
 
 
   constructor(private _http: Http,private dataservice:DataService,private router:Router) {
-      
+
   }
-  
+
   sendquestion(question) {
     // this.dataservice.subject.next(question);
    this.dataservice.setQuestion(question);
