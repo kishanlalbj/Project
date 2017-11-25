@@ -12,17 +12,20 @@ export class DataService {
 
 //   private subject = new Subject<any>();
   private subject = new BehaviorSubject({});
-  
-  getQuestion(): Observable<any> 
+
+  getQuestion(): Observable<any>
   {
       return this.subject.asObservable();
   }
-  
+
   setQuestion(user:any):void{
       this.subject.next(user);
   }
+
   getData(question) {
-        return this.http.get('http://localhost:8080/data/?Question='+question);
+
+        return this.http.get('http://localhost:8080/data?q='+question);
+
   }
 
 }
