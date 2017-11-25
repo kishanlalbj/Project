@@ -19,6 +19,8 @@ export class LoginComponent{
     user2_username = "navan01";
     user2_password = "password2";
 
+    invalidcred:boolean = false;
+
     constructor(private router:Router) {}
  
     login(username,password) {
@@ -45,6 +47,10 @@ export class LoginComponent{
       if(username == this.user2_username && password == this.user2_password ) {
         
                 this.router.navigate(['home'])
+  }
+
+  else {
+    this.invalidcred = true;
   }
 
     

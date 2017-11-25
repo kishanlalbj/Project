@@ -5,7 +5,7 @@
 	border-style: none;
 	border-color: #fff;
 	box-shadow:  0 4px 8px 0 rgba(0,0,0,0.3);
-	height: 107px;
+	height: 10%;
 }
 .navbar-nav{
 	padding:13px;
@@ -17,8 +17,14 @@
 
 #wiprologo{
 	margin: 0;
-	padding-top: 20px;
-	padding-left: 20px;
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 45%;
+}
+#watsonlogo {
+	width:25%;
+	margin-top:-1%;
+	margin-left:2%;
 }
 .navbar-brand{
 	padding: 0;
@@ -30,25 +36,13 @@ a:hover{
 	text-decoration: none;
 	color: black;
 }
-.display{
-  display: inline-grid;
-  text-align: left;
-	padding-top: 30px;
-	padding-right: 30px;
 
+.glyphicon::before{
+	color:royalblue;
+	font-size: 1.15em;
 }
 .glyphicon {
-  top:0;
-  font-size: 20px;
-  padding-left: 5px;
+  font-size: 1.15em;  /* padding-left: 5px; */
+  /* background-color: cornflowerblue; */
 }
-.admin{
-	padding-left: 15px;
-	top:0;
-	font-size: 20px;
-}
-.help{
-	padding-left: 7px;
-	top:0;
-	font-size: 20px;
-}
+

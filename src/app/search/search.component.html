@@ -4,156 +4,48 @@
 </ng-template>
 
 <div *ngIf="!error;else errormessage">
-
-<ng-template #invalidmessage>
-	<h4 style="color:red;margin-top:25%;margin-left:25%">{{ answer }}</h4>
-</ng-template>
-
-<div class="secondRow row">
-
-    <div class= " col-md-3 col-lg-3">
-
-        <div class="panel-group">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#filter1">
-                            Filter
-                        </a>
-                        <a class="pull-right" data-toggle="collapse" href="#filter1">
-                            <span class="glyphicon glyphicon-filter"></span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="filter1" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        <div class="filter-setting">
-                            <form action="" >
-                                <label class="internalHeadings">North America</label>
-                                <a class="pull-right collapsed-icon-toggle" href="#coll-1" data-toggle="collapse">
-                                    <span class="glyphicon glyphicon-minus on-opened"></span>
-                                    <span class="glyphicon glyphicon-plus on-closed"></span>
-                                </a>
-                                <br/>
-                                <div id="coll-1" class="collapse in">
-                                    <label>Kern</label>
-                                    <a class="pull-right collapsed-icon-toggle" href="#coll-11" data-toggle="collapse">
+    
+    <ng-template #invalidmessage>
+        <h4 style="color:red;margin-top:25%;margin-left:25%">{{ answer }}</h4>
+    </ng-template>
+    
+    <div class="secondRow row">
+        
+        <div class= " col-md-3 col-lg-3">
+            
+            <div class="panel-group">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#filter1">
+                                Filter
+                            </a>
+                            <a class="pull-right" data-toggle="collapse" href="#filter1">
+                                <span class="glyphicon glyphicon-filter"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="filter1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="filter-setting">
+                                <form action="" >
+                                    <label class="internalHeadings">North America</label>
+                                    <a class="pull-right collapsed-icon-toggle" href="#coll-1" data-toggle="collapse">
                                         <span class="glyphicon glyphicon-minus on-opened"></span>
                                         <span class="glyphicon glyphicon-plus on-closed"></span>
                                     </a>
                                     <br/>
-
-
-                                    <div id="coll-11" class="collapse in">
-
-                                        <div class="padding-v-xs" data-toggle="buttons">
-                                            <label class="btn btn-default btn-xs ico">
-                                                <input type="checkbox" name=""
-                                                value="" autocomplete="off"/>
-                                                <span class="icon glyphicon glyphicon-ok"></span>
-                                            </label>
-                                            <span>Kern River</span>
-                                        </div>
-                                        <div class="padding-v-xs" data-toggle="buttons">
-                                            <label class="btn btn-default btn-xs ico">
-                                                <input type="checkbox" name=""
-                                                value="" autocomplete="off"/>
-                                                <span class="icon glyphicon glyphicon-ok"></span>
-                                            </label>
-                                            <span>Edison</span>
-                                        </div>
-                                        <div class="padding-v-xs" data-toggle="buttons">
-                                            <label class="btn btn-default btn-xs ico">
-                                                <input type="checkbox" name=""
-                                                value="" autocomplete="off"/>
-                                                <span class="icon glyphicon glyphicon-ok"></span>
-                                            </label>
-                                            <span>Canfield Ranch</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div id="coll-1" class="collapse in">
-                                    <label>Los Angeles</label>
-                                    <a class="pull-right collapsed-icon-toggle" href="#coll-12" data-toggle="collapse">
-                                        <span class="glyphicon glyphicon-minus on-opened"></span>
-                                        <span class="glyphicon glyphicon-plus on-closed"></span>
-                                    </a>
-                                    <br/>
-
-
-                                    <div id="coll-12" class="collapse in">
-
-                                        <div class="padding-v-xs" data-toggle="buttons">
-                                            <label class="btn btn-default btn-xs ico">
-                                                <input type="checkbox" name=""
-                                                value="" autocomplete="off"/>
-                                                <span class="icon glyphicon glyphicon-ok"></span>
-                                            </label>
-                                            <span>Beverly Hills</span>
-                                        </div>
-                                        <div class="padding-v-xs" data-toggle="buttons">
-                                            <label class="btn btn-default btn-xs ico">
-                                                <input type="checkbox" name=""
-                                                value="" autocomplete="off"/>
-                                                <span class="icon glyphicon glyphicon-ok"></span>
-                                            </label>
-                                            <span>Dominguez</span>
-                                        </div>
-
-                                    </div>
-                                    <!-- </div> -->
-
-                                    <!-- <div id="coll-1" class="collapse in"> -->
-                                        <label>Orange</label>
-                                        <a class="pull-right collapsed-icon-toggle" href="#coll-13" data-toggle="collapse">
-                                            <span class="glyphicon glyphicon-minus on-opened"></span>
-                                            <span class="glyphicon glyphicon-plus on-closed"></span>
-                                        </a>
-                                        <br/>
-                                        <div id="coll-13" class="collapse in">
-
-                                            <div class="padding-v-xs" data-toggle="buttons">
-                                                <label class="btn btn-default btn-xs ico">
-                                                    <input type="checkbox" name=""
-                                                    value="" autocomplete="off"/>
-                                                    <span class="icon glyphicon glyphicon-ok"></span>
-                                                </label>
-                                                <span>Huntington</span>
-                                            </div>
-                                            <div class="padding-v-xs" data-toggle="buttons">
-                                                <label class="btn btn-default btn-xs ico">
-                                                    <input type="checkbox" name=""
-                                                    value="" autocomplete="off"/>
-                                                    <span class="icon glyphicon glyphicon-ok"></span>
-                                                </label>
-                                                <span>Richfield</span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
-                                    <hr class="line"/>
-
-                                    <label class="internalHeadings" >United Kingdom</label>
-                                    <a class="pull-right collapsed-icon-toggle" href="#coll-2" data-toggle="collapse">
-                                        <span class="glyphicon glyphicon-minus on-opened"></span>
-                                        <span class="glyphicon glyphicon-plus on-closed"></span>
-                                    </a>
-                                    <br/>
-                                    <div id="coll-2" class="collapse in">
+                                    <div id="coll-1" class="collapse in">
                                         <label>Kern</label>
-                                        <a class="pull-right collapsed-icon-toggle" href="#coll-21" data-toggle="collapse">
+                                        <a class="pull-right collapsed-icon-toggle" href="#coll-11" data-toggle="collapse">
                                             <span class="glyphicon glyphicon-minus on-opened"></span>
                                             <span class="glyphicon glyphicon-plus on-closed"></span>
                                         </a>
                                         <br/>
-
-
-                                        <div id="coll-21" class="collapse in">
-
+                                        
+                                        
+                                        <div id="coll-11" class="collapse in">
+                                            
                                             <div class="padding-v-xs" data-toggle="buttons">
                                                 <label class="btn btn-default btn-xs ico">
                                                     <input type="checkbox" name=""
@@ -178,21 +70,21 @@
                                                 </label>
                                                 <span>Canfield Ranch</span>
                                             </div>
-
+                                            
                                         </div>
                                     </div>
-
+                                    
                                     <div id="coll-1" class="collapse in">
                                         <label>Los Angeles</label>
-                                        <a class="pull-right collapsed-icon-toggle" href="#coll-22" data-toggle="collapse">
+                                        <a class="pull-right collapsed-icon-toggle" href="#coll-12" data-toggle="collapse">
                                             <span class="glyphicon glyphicon-minus on-opened"></span>
                                             <span class="glyphicon glyphicon-plus on-closed"></span>
                                         </a>
                                         <br/>
-
-
-                                        <div id="coll-22" class="collapse in">
-
+                                        
+                                        
+                                        <div id="coll-12" class="collapse in">
+                                            
                                             <div class="padding-v-xs" data-toggle="buttons">
                                                 <label class="btn btn-default btn-xs ico">
                                                     <input type="checkbox" name=""
@@ -209,162 +101,280 @@
                                                 </label>
                                                 <span>Dominguez</span>
                                             </div>
-
+                                            
                                         </div>
-                                    </div>
-
-                                    <div id="coll-1" class="collapse in">
-                                        <label>Orange</label>
-                                        <a class="pull-right collapsed-icon-toggle" href="#coll-23" data-toggle="collapse">
+                                        <!-- </div> -->
+                                        
+                                        <!-- <div id="coll-1" class="collapse in"> -->
+                                            <label>Orange</label>
+                                            <a class="pull-right collapsed-icon-toggle" href="#coll-13" data-toggle="collapse">
+                                                <span class="glyphicon glyphicon-minus on-opened"></span>
+                                                <span class="glyphicon glyphicon-plus on-closed"></span>
+                                            </a>
+                                            <br/>
+                                            <div id="coll-13" class="collapse in">
+                                                
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Huntington</span>
+                                                </div>
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Richfield</span>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <hr class="line"/>
+                                        
+                                        <label class="internalHeadings" >United Kingdom</label>
+                                        <a class="pull-right collapsed-icon-toggle" href="#coll-2" data-toggle="collapse">
                                             <span class="glyphicon glyphicon-minus on-opened"></span>
                                             <span class="glyphicon glyphicon-plus on-closed"></span>
                                         </a>
                                         <br/>
-                                        <div id="coll-23" class="collapse in">
-
-                                            <div class="padding-v-xs" data-toggle="buttons">
-                                                <label class="btn btn-default btn-xs ico">
-                                                    <input type="checkbox" name=""
-                                                    value="" autocomplete="off"/>
-                                                    <span class="icon glyphicon glyphicon-ok"></span>
-                                                </label>
-                                                <span>Huntington</span>
+                                        <div id="coll-2" class="collapse in">
+                                            <label>Kern</label>
+                                            <a class="pull-right collapsed-icon-toggle" href="#coll-21" data-toggle="collapse">
+                                                <span class="glyphicon glyphicon-minus on-opened"></span>
+                                                <span class="glyphicon glyphicon-plus on-closed"></span>
+                                            </a>
+                                            <br/>
+                                            
+                                            
+                                            <div id="coll-21" class="collapse in">
+                                                
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Kern River</span>
+                                                </div>
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Edison</span>
+                                                </div>
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Canfield Ranch</span>
+                                                </div>
+                                                
                                             </div>
-                                            <div class="padding-v-xs" data-toggle="buttons">
-                                                <label class="btn btn-default btn-xs ico">
-                                                    <input type="checkbox" name=""
-                                                    value="" autocomplete="off"/>
-                                                    <span class="icon glyphicon glyphicon-ok"></span>
-                                                </label>
-                                                <span>Richfield</span>
-                                            </div>
-
                                         </div>
-                                    </div>
-
-                                </form>
+                                        
+                                        <div id="coll-1" class="collapse in">
+                                            <label>Los Angeles</label>
+                                            <a class="pull-right collapsed-icon-toggle" href="#coll-22" data-toggle="collapse">
+                                                <span class="glyphicon glyphicon-minus on-opened"></span>
+                                                <span class="glyphicon glyphicon-plus on-closed"></span>
+                                            </a>
+                                            <br/>
+                                            
+                                            
+                                            <div id="coll-22" class="collapse in">
+                                                
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Beverly Hills</span>
+                                                </div>
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Dominguez</span>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="coll-1" class="collapse in">
+                                            <label>Orange</label>
+                                            <a class="pull-right collapsed-icon-toggle" href="#coll-23" data-toggle="collapse">
+                                                <span class="glyphicon glyphicon-minus on-opened"></span>
+                                                <span class="glyphicon glyphicon-plus on-closed"></span>
+                                            </a>
+                                            <br/>
+                                            <div id="coll-23" class="collapse in">
+                                                
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Huntington</span>
+                                                </div>
+                                                <div class="padding-v-xs" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-xs ico">
+                                                        <input type="checkbox" name=""
+                                                        value="" autocomplete="off"/>
+                                                        <span class="icon glyphicon glyphicon-ok"></span>
+                                                    </label>
+                                                    <span>Richfield</span>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="border col-md-9 col-lg-9">
-
-            <div class= "searchContainer">
-
+            
+            <div class="border col-md-9 col-lg-9">
+                
+                
                 <div id='search-box'>
                     <div id='search-form' >
-                        <input id='search-text' name='q' [(ngModel)]="question" placeholder='Search' type='text'/>
-                        <button id='search-button' type='submit' (click)="search(question)">
-                            <span>Search</span>
-                        </button>
+                        <form id="search-form" role="form">
+                            <input id='search-text' name='q' [(ngModel)]="question" placeholder='Search' type='text'/>
+                            <button id='search-button' type='submit' (click)="search(question)">
+                                <span>Search</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
-
-            </div>
-
-            <div *ngIf="!edited;else notable" class="col-md-10" style="margin-top:2%">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        Results
-                    </div>
-                    <div class="panel-panel-content" style="padding:2%" class="answer">
-                        {{ answer }}
-                    </div>
-                    <div class="panel-footer">
-                    </div>
-                </div>
-            </div>
-
-            <ng-template #notable>
-                <div class="col-md-12" style="margin-top:2%" >
-                    <table class="table table-striped">
-
-            					<tr style="">
-            						<th>Well Name </th>
-            						<th>Operator </th>
-            						<th>Lease Name </th>
-            						<th>Status</th>
-            						<th>Type</th>
-            						<th>Spud Date</th>
-            						<th>Total Depth </th>
-            					</tr>
-                      <tr>
-                        <td>{{answer.Well_Name}}</td>
-                        <td> {{ answer.Operator }} </td>
-                        <td> {{answer.Lease_Name}} </td>
-                        <td>{{ answer.Status }}</td>
-            						<td> {{answer.Type}} </td>
-            						<td> {{ answer.Spud_Date  }} </td>
-            						<td> {{ answer.Total_Depth }} </td>
-                      </tr>
-                    </table>
-                  </div>
-                </ng-template>
-
-            <div *ngIf="!invalid_search">
-
-                <div class="col-md-10">
-                    <div class="panel panel-default" >
-                        <div class="panel-content" style="padding:2%">
-
-                            <p>Document :
-
-						<a href="../assets/data/{{ document }}" href="../../assets/data/{{document}}" target = "_blank">	{{ document }} </a>
-
-							</p>
-                            <p>Field Name : {{ field_name }} </p>
-                            <p>Operator Name : {{ operator_name}}</p>
-                            <p>County Name: {{ county_name }}</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-10">
+                
+                
+                <div *ngIf="!edited;else notable" class="col-md-10" style="margin-top:2%">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Related Documents
+                            Results
                         </div>
-                        <div class="panel-content" style="padding:2%">
-
-                            <span>
-                                Well Report :
-                                <a href="../assets/data/{{well_report}}" target="_blank">
-                                    {{ well_report }} </a>
-                            </span>
-                            <br>
-                            <span>
-                                Injection Data :
-                                <a href="../assets/data/{{injection_data}}" target="_blank">
-                                    {{ injection_data }} </a>
-                            </span>
-                            <br>
-                            <span>
-                                Production Data :
-                                <a href="../assets/data/{{production_data}}" target="_blank">
-                                    {{ production_data }} </a>
-                            </span>
-                            <br>
-                            <span>
-                                Well Designs :
-                                <a href="../../assets/data/{{ well_design }}" target="_blank">
-
-                                {{ well_design }} </a>
-                            </span>
-                            <br>
-                            <span>
-                                Well Logs :
-                                <a href="../assets/data/{{well_logs}}" target="_blank">
-
-                                {{ well_logs }} </a>
-                            </span>
+                        <div class="panel-panel-content" style="padding:2%" class="answer">
+                            {{ answer }}
+                        </div>
+                        <div class="panel-footer">
                         </div>
                     </div>
                 </div>
-            </div>
-		      </div>
-        </div>
-</div>
+                
+                <ng-template #notable>
+                    <div class="col-md-12" style="margin-top:2%" >
+                        <table class="table table-striped table-bordered">
+                            
+                            <tr style="background-color:cornflowerblue">
+                                <th>Well Name </th>
+                                <th>Operator </th>
+                                <th>Lease Name </th>
+                                <th>Status</th>
+                                <th>Type</th>
+                                <th>Spud Date</th>
+                                <th>Total Depth </th>
+                            </tr>
+                            <!-- <tr>
+                                <td>{{answer.Well_Name}}</td>
+                                <td> {{ answer.Operator }} </td>
+                                <td> {{answer.Lease_Name}} </td>
+                                <td>{{ answer.Status }}</td>
+                                <td> {{answer.Type}} </td>
+                                <td> {{ answer.Spud_Date  }} </td>
+                                <td> {{ answer.Total_Depth }} </td>
+                            </tr> -->
+                            <tr *ngFor="let x of answer">
+                                <td> {{ x.Well_Name }} </td>
+                                <td> {{ x.Operator }} </td>  
+                                <td> {{ x.Lease_Name }} </td>
+                                <td> {{ x.Status }}</td>
+                                <td> {{ x.Type }} </td>
+                                <td> {{ x.Spud_Date  }} </td>
+                                <td> {{ x.Total_Depth }} </td>
+                            </tr>
+                        </table>
+                    </div>
+                </ng-template>
+                
+                <div *ngIf="!invalid_search">
+                    
+                    <div class="col-md-10">
+                        <div class="panel panel-default" >
+                            <div class="panel-content" style="padding:2%">
+                                
+                                <p>Document :
+                                    
+                                    <a href="../assets/data/{{ document }}" href="../../assets/data/{{document}}" target = "_blank">	{{ document }} </a>
+                                    
+                                </p>
+                                <p>Field Name : {{ field_name }} </p>
+                                <p>Operator Name : {{ operator_name}}</p>
+                                <p>County Name: {{ county_name }}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-10">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Related Documents
+                            </div>
+                            <div class="panel-content" style="padding:2%">
+                                
+                                <span>
+                                    Well Report :
+                                    <a href="../assets/data/{{well_report}}" target="_blank">
+                                        {{ well_report }} </a>
+                                    </span>
+                                    <br>
+                                    <span>
+                                        Injection Data :
+                                        <a href="../assets/data/{{injection_data}}" target="_blank">
+                                            {{ injection_data }} </a>
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Production Data :
+                                            <a href="../assets/data/{{production_data}}" target="_blank">
+                                                {{ production_data }} </a>
+                                            </span>
+                                            <br>
+                                            <span>
+                                                Well Designs :
+                                                <a href="../../assets/data/{{ well_design }}" target="_blank">
+                                                    
+                                                    {{ well_design }} </a>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    Well Logs :
+                                                    <a href="../assets/data/{{well_logs}}" target="_blank">
+                                                        
+                                                        {{ well_logs }} </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        

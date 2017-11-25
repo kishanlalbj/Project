@@ -1,32 +1,19 @@
 <div id="home" class="container">
-
-  <div style="margin-left:1000px;">
-<a routerLink="../login" >logout</a>
-  </div>
-
-        <!-- <div class="row" id="searchbox" align="center">
-          <div class="container">
-            <input type="text" class="form-control" [(ngModel)]="searchtext">
-            <button id="searchbtn" routerLink="search_results" routerLinkActive="active" class="btn btn-primary" (click)="sendquestion()">Search</button>
-          </div>
-        </div> -->
-        <div id='search-box'>
-            <div  id='search-form' >
-              <input id='search-text' name='q'[(ngModel)]="question" placeholder='Search' type='text'/>
-              <button id='search-button' type='submit' (click)="sendquestion(question)">
-              <span>Search</span>
-              </button>
-            </div>
-        </div>
-</div>
-<!-- <div class="row" style="padding-top:5%">
-    <div class="col-md-12" class="container">
-        <div class="col-md-5 search" align="center">
-            <form>
-                <input type="text" class="form-control" name="question" [(ngModel)]="question">
-                <br>
-                <button type="button" class="btn btn-primary" (click)="sendquestion(question)">Search</button>
+    
+    <div style="margin-left:1000px;">
+        <a routerLink="../login" >logout</a>
+    </div>
+    
+    
+    <div id='search-box'>
+        <div  id='search-form'>
+            <form id="homesearch" role="form">
+                <input id='search-text' name='q'[(ngModel)]="question" placeholder='Search' type='text'/>
+                <button id='search-button' type='submit' (click)="sendquestion(question)">
+                    <span>Search</span>
+                </button>
             </form>
         </div>
     </div>
-</div> -->
+</div>
+

@@ -2,7 +2,6 @@ import { Observer } from 'rxjs/Observer';
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { ChangeDetectorRef } from '@angular/core';
-//import { CsvgeneratorService } from '../csvgenerator.service';
 import { DataService } from '../data.service';
 import { Subscription } from 'rxjs/Subscription';
 import {Router} from '@angular/router';
@@ -15,28 +14,25 @@ import { Observable } from "rxjs/Observable";
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-
+  
 })
 export class HomeComponent implements OnInit  {
-
+  
   alldata:any = [];
   searchtext:string;
   subscription: Subscription;
   message:string;
-
-
+  
+  
   constructor(private _http: Http,private dataservice:DataService,private router:Router) {
-
+    
   }
-
+  
   sendquestion(question) {
-    // this.dataservice.subject.next(question);
-   this.dataservice.setQuestion(question);
-   this.router.navigate(['search']);
+    this.dataservice.setQuestion(question);
+    this.router.navigate(['search']);
   }
-
-  ngOnInit() {
-
-          }
-
+  
+  ngOnInit() {}
+  
 }
