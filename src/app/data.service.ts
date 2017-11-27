@@ -24,7 +24,6 @@ export class DataService {
   getData(question) {
 
         return this.http.get('http://localhost:8080/data?q='+question);
-        // return this.http.get('http://www.omdbapi.com/?i=tt3896198&apikey=ef2ff1f4');
         
 
   }

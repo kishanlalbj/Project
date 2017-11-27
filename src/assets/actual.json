@@ -34,6 +34,218 @@
         },
         
         {
+            "Document": "",
+            "Entity": {"CoreType": "DIAMOND"},
+            "Intent": "AllWells",
+            "NO_OF_DOCS": 5,
+            "Other_Data": [
+                {"Filter_data": {
+                    "Asset_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Region": "CA"
+                },
+                "More_Details": {
+                    "County_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Operator": "N/A",
+                    "Well_Name": "HOME SCURRY CLEARHILLS ",
+                    "x" :      "1-26-87-12"
+                },
+                "Related_documents": {
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Well_Report": "Not Available"
+                }
+            },
+            {
+                "Filter_data": {
+                    "Asset_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Region": "CA"
+                },
+                "More_Details": {
+                    "County_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Operator": "N/A",
+                    "Well_Name": "HOME ET AL DOIG RIVER ",
+                    "x": "2-22-90-12"
+                },
+                "Related_documents": {
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Well_Report": "Not Available"
+                }
+            },
+            {
+                "Filter_data": {
+                    "Asset_Name": "SELKIRK",
+                    "Field_Name": "N/A",
+                    "Region": "CA"
+                },
+                "More_Details": {
+                    "County_Name": "SELKIRK",
+                    "Field_Name": "N/A",
+                    "Operator": "M00010",
+                    "Well_Name": "MANNING KRANZ TILSTON 4 5 6 ",
+                    "x":"29"
+                },
+                "Related_documents": {
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Well_Report": "Not Available"
+                }
+            },
+            {
+                "Filter_data": {
+                    "Asset_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Region": "CA"
+                },
+                "More_Details": {
+                    "County_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Operator": "N/A",
+                    "Well_Name": "HB SHELL CLEAR PRAIRIE ",
+                    "x":"4-32-91-12"
+                },
+                "Related_documents": {
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Well_Report": "Not Available"
+                }
+            },
+            {
+                "Filter_data": {
+                    "Asset_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Region": "CA"
+                },
+                "More_Details": {
+                    "County_Name": "WHEATLAND",
+                    "Field_Name": "N/A",
+                    "Operator": "N/A",
+                    "Well_Name": "WESTCOAST AMOCO PRESPATOU ",
+                    "x":"6-27-88-12"
+                },
+                "Related_documents": {
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Well_Report": "Not Available"
+                }
+            }
+        ],
+        "Question": "show me the wells where core type id diamond",
+        "Response_Time": "",
+        "Response_Type": "All Data Sets",
+        "Result": {
+            "Well_docs": [
+                {
+                    "Checkshot": "Not Available",
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Seismic": "Not Available",
+                    "Synthetics": "Not Available",
+                    "VSP": "Not Available",
+                    "Well_Design": "Not Available",
+                    "Well_Logs": "Not Available",
+                    "Well_Report": "Not Available"
+                },
+                {
+                    "Checkshot": "Not Available",
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Seismic": "Not Available",
+                    "Synthetics": "Not Available",
+                    "VSP": "Not Available",
+                    "Well_Design": "Not Available",
+                    "Well_Logs": "Not Available",
+                    "Well_Report": "Not Available"
+                },
+                {
+                    "Checkshot": "Not Available",
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Seismic": "Not Available",
+                    "Synthetics": "Not Available",
+                    "VSP": "Not Available",
+                    "Well_Design": "Not Available",
+                    "Well_Logs": "Not Available",
+                    "Well_Report": "Not Available"
+                },
+                {
+                    "Checkshot": "Not Available",
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Seismic": "Not Available",
+                    "Synthetics": "Not Available",
+                    "VSP": "Not Available",
+                    "Well_Design": "Not Available",
+                    "Well_Logs": "Not Available",
+                    "Well_Report": "Not Available"
+                },
+                {
+                    "Checkshot": "Not Available",
+                    "Injection_Data": "Not Available",
+                    "Production_Data": "Not Available",
+                    "Seismic": "Not Available",
+                    "Synthetics": "Not Available",
+                    "VSP": "Not Available",
+                    "Well_Design": "Not Available",
+                    "Well_Logs": "Not Available",
+                    "Well_Report": "Not Available"
+                }
+            ],
+            "Well_headers": [
+                {
+                    "Lease_Name": "N/A",
+                    "Operator": "N/A",
+                    "Spud_Date": "29-JAN-90",
+                    "Status": "LIC",
+                    "Total_Depth": "N/A",
+                    "Type": "Not Available, ",
+                    "Well_Name": "HOME SCURRY CLEARHILLS 1-26-87-12"
+                },
+                {
+                    "Lease_Name": "N/A",
+                    "Operator": "N/A",
+                    "Spud_Date": "18-FEB-63",
+                    "Status": "LIC",
+                    "Total_Depth": "N/A",
+                    "Type": "Not Available, ",
+                    "Well_Name": "HOME ET AL DOIG RIVER 2-22-90-12"
+                },
+                {
+                    "Lease_Name": "N/A",
+                    "Operator": "M00010",
+                    "Spud_Date": "21-DEC-58",
+                    "Status": "LIC",
+                    "Total_Depth": "N/A",
+                    "Type": "Not Available, ",
+                    "Well_Name": "MANNING KRANZ TILSTON 4 5 6 29"
+                },
+                {
+                    "Lease_Name": "N/A",
+                    "Operator": "N/A",
+                    "Spud_Date": "17-FEB-64",
+                    "Status": "LIC",
+                    "Total_Depth": "N/A",
+                    "Type": "Not Available, ",
+                    "Well_Name": "HB SHELL CLEAR PRAIRIE 4-32-91-12"
+                },
+                {
+                    "Lease_Name": "N/A",
+                    "Operator": "N/A",
+                    "Spud_Date": "31-DEC-88",
+                    "Status": "LIC",
+                    "Total_Depth": "N/A",
+                    "Type": "Not Available, ",
+                    "Well_Name": "WESTCOAST AMOCO PRESPATOU ",
+                    "x": "6-27-88-12"
+                }
+            ]
+        },
+        "Type": "Success"},
+        {
             "Intent":
             {
                 "WellHeader": 0.9586988925933839
@@ -46,7 +258,8 @@
                     "Status": "Active",
                     "Type": "Cyclic Steam, Oil & Gas, ",
                     "Spud_Date": "27-Dec-66",
-                    "Total_Depth": 2486.0
+                    "Total_Depth": 2486.0,
+                    "Well_design" : "welldesign.jpg"
                 },
                 {
                     "Well_Name": "13/22a-B13",
@@ -55,7 +268,9 @@
                     "Status": "Active",
                     "Type": "Cyclic Steam, Oil & Gas, ",
                     "Spud_Date": "8-Sep-65",
-                    "Total_Depth": 1486.0
+                    "Total_Depth": 1486.0,
+                    "Well_design" : "welldesign.jpg"
+                    
                 },
                 {
                     "Well_Name": "13/22a-B13",
@@ -64,7 +279,9 @@
                     "Status": "Idle",
                     "Type": "Cyclic Steam, Oil & Gas, ",
                     "Spud_Date": "10-Oct-66",
-                    "Total_Depth": 6300.0
+                    "Total_Depth": 6300.0,
+                    "Well_design" : "welldesign.jpg"
+                    
                 }
             ],
             "Response_Type": "Structured Data",

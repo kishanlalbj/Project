@@ -14,6 +14,7 @@ import { ChangeDetectorRef } from '@angular/core';
 export class SearchComponent implements OnInit ,OnDestroy {
   
   error:boolean = false;
+  progress:boolean=false;
   invalid_search:boolean = false;
   question:string;
   subscription:Subscription;
@@ -31,7 +32,9 @@ export class SearchComponent implements OnInit ,OnDestroy {
   injection_data:string;
   well_design:string;
   well_logs:string;
-  display:any= [];
+  display:any = [];
+  welldocs:any = [];
+  wellheaders:any = [];
   
   constructor(private dataservice:DataService,private ref: ChangeDetectorRef) {
     
@@ -39,14 +42,15 @@ export class SearchComponent implements OnInit ,OnDestroy {
   
   search(question) {
     console.log(question);
+    this.progress = true;
     
     this.dataservice.getData(question).subscribe((result:Response) =>{
+      this.progress = false;
       
   
-      
       if(result.json()[0].Type == "Success") {
         console.log("VALID SEARCH");
-        console.log(typeof result.json()[0].Result);
+        // console.log(typeof result.json()[0].Result);
         this.invalid_search = false;
         this.document = result.json()[0].Document;
         this.result = result.json()[0].Indent;
@@ -65,14 +69,10 @@ export class SearchComponent implements OnInit ,OnDestroy {
         }
         else if(typeof this.answer == "object") {
           this.edited = true;
+          console.log(this.answer);
+          this.welldocs = result.json()[0].Result.Well_docs;
+          this.wellheaders = result.json()[0].Result.Well_headers
           
-          for(let i = 0;i<=this.answer.length;i++) {
-            if(this.answer[i].Status =="Active") {
-              this.display.push(this.answer[i]);
-              console.log(this.display);
-            }
-          }
-
         }
         
       }
@@ -92,7 +92,7 @@ export class SearchComponent implements OnInit ,OnDestroy {
   ngOnInit() {
     
     this.subscription = this.dataservice.getQuestion().subscribe(data =>{
-      this.question = data;
+    this.question = data;
       console.log(this.question);
     })
     this.search(this.question);
