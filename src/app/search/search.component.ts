@@ -35,6 +35,7 @@ export class SearchComponent implements OnInit ,OnDestroy {
   display:any = [];
   welldocs:any = [];
   wellheaders:any = [];
+  otherdata:any = [];
   
   constructor(private dataservice:DataService,private ref: ChangeDetectorRef) {
     
@@ -55,14 +56,16 @@ export class SearchComponent implements OnInit ,OnDestroy {
         this.document = result.json()[0].Document;
         this.result = result.json()[0].Indent;
         this.answer = result.json()[0].Result;
-        this.field_name = result.json()[0].Other_Data.More_Details.Field_Name;
-        this.operator_name = result.json()[0].Other_Data.More_Details.Operator_Name;
-        this.county_name = result.json()[0].Other_Data.More_Details.County_Name;
-        this.well_report = result.json()[0].Other_Data.Related_documents.Well_Report;
-        this.production_data = result.json()[0].Other_Data.Related_documents.Production_Data;
-        this.injection_data = result.json()[0].Other_Data.Related_documents.Injection_Data;
-        this.well_design = result.json()[0].Other_Data.Related_documents.Well_Design;
-        this.well_logs = result.json()[0].Other_Data.Related_documents.Well_Logs;
+        this.otherdata = result.json()[0].Other_Data;
+        console.log(this.otherdata[0]);
+        // this.field_name = result.json()[0].Other_Data.More_Details.Field_Name;
+        // this.operator_name = result.json()[0].Other_Data.More_Details.Operator_Name;
+        // this.county_name = result.json()[0].Other_Data.More_Details.County_Name;
+        // this.well_report = result.json()[0].Other_Data.Related_documents.Well_Report;
+        // this.production_data = result.json()[0].Other_Data.Related_documents.Production_Data;
+        // this.injection_data = result.json()[0].Other_Data.Related_documents.Injection_Data;
+        // this.well_design = result.json()[0].Other_Data.Related_documents.Well_Design;
+        // this.well_logs = result.json()[0].Other_Data.Related_documents.Well_Logs;
         
         if(typeof this.answer == "string") {
           this.edited = false;
@@ -71,8 +74,8 @@ export class SearchComponent implements OnInit ,OnDestroy {
           this.edited = true;
           console.log(this.answer);
           this.welldocs = result.json()[0].Result.Well_docs;
-          this.wellheaders = result.json()[0].Result.Well_headers
-          
+          this.wellheaders = result.json()[0].Result.Well_headers;
+
         }
         
       }

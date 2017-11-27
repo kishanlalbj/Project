@@ -306,6 +306,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+
                                             <td> <a>John </a></td>
                                             <td> <a>Doe </a></td>
                                             <td> <a>john@example.com </a></td>
@@ -322,22 +323,22 @@
                 </div>
                 
                 <ng-template #notable>
-                    <div class="col-md-12" style="margin-top:2%" >
+                    <div class="col-md-12" style="margin-top:2%;overflow-x:auto;" >
                         <table class="table table-hover table -condensed">
                             <thead>
                                 <tr style="background-color:cornflowerblue">
                                     <th>Well Name </th>
-                                    <th>Operator </th>
                                     <th>Lease Name </th>
-                                    <th>Status</th>
-                                    <th>Type</th>
+                                    <th>Operator </th>
                                     <th>Spud Date</th>
-                                    <th>Total Depth </th>
-                                    <th>Well Design </th>
+                                    <th>Status</th>
+                                    <th>Total Depth</th>
+                                    <th>Type </th>
+        
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr *ngFor="let x of answer">
+                            <tbody >
+                                <!-- <tr *ngFor="let x of answer">
                                     <td> {{ x.Well_Name }} </td>
                                     <td> {{ x.Operator }} </td>  
                                     <td> {{ x.Lease_Name }} </td>
@@ -348,7 +349,33 @@
                                     <td> 
                                         <a href="../assets/data/{{ x.well_design }}" target="_blank"> {{ x.Well_design }} </a>       
                                     </td>
+                                </tr> -->
+
+
+                                <tr *ngFor="let x of wellheaders;let i = index">
+
+                                    <td> {{ x.Well_Name }} </td>
+                                    <td> {{ x.Lease_Name }} </td>
+                                    <td> {{ x.Operator }} </td>
+                                    <td> {{ x.Spud_Date }} </td>
+                                    <td> {{ x.Status }} </td>
+                                    <td> {{ x.Total_Depth }} </td>
+                                    <td> {{ x.Type }} </td>
+
+                                    <td> {{ welldocs[i].checkshot }} </td>
+                                    <td> {{ welldocs[i].Injection_Data }} </td>
+                                    <td> {{ welldocs[i].Production_Data }} </td>
+                                    <td> {{ welldocs[i].Seismic }} </td>
+                                    <td> {{ welldocs[i].Synthetics }} </td>
+                                    <td> {{ welldocs[i].VSP }} </td>
+                                    <td> {{ welldocs[i].Well_Design }} </td>
+                                    <td> {{ welldocs[i].Well_Logs }} </td>
+                                    <td> {{ welldocs[i].Well_Report }} </td>
+                                    
+                                    
+                                       
                                 </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -365,9 +392,13 @@
                                     <a href="../assets/data/{{ document }}" href="../../assets/data/{{document}}" target = "_blank">	{{ document }} </a>
                                     
                                 </p>
-                                <p>Field Name : {{ field_name }} </p>
-                                <p>Operator Name : {{ operator_name}}</p>
-                                <p>County Name: {{ county_name }}</p>
+
+                                <!-- <p>Field Name: {{ data.More_Details.Field_Name }} </p> -->
+
+                                
+                                <!-- <p>Field Name : {{ field_name }} </p> -->
+                                <!-- <p>Operator Name : {{ operator_name}}</p> -->
+                                <!-- <p>County Name: {{ county_name }}</p> -->
                                 
                             </div>
                         </div>
