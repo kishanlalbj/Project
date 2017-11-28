@@ -20,6 +20,8 @@ export class LoginComponent{
     user2_password = "password2";
 
     invalidcred:boolean = false;
+    username:string;
+    password:string;
 
     constructor(private router:Router) {}
  

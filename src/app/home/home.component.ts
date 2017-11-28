@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit  {
   searchtext:string;
   subscription: Subscription;
   message:string;
+  question:string;
   
   
   constructor(private _http: Http,private dataservice:DataService,private router:Router) {
