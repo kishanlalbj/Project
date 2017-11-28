@@ -43,7 +43,10 @@ export class SearchComponent implements OnInit ,OnDestroy {
   
   search(question) {
     console.log(question);
+    console.log("search before:",this.progress);
     this.progress = true;
+    console.log("search after:",this.progress);
+    
     
     this.dataservice.getData(question).subscribe((result:Response) =>{
       this.progress = false;
@@ -57,7 +60,7 @@ export class SearchComponent implements OnInit ,OnDestroy {
         this.result = result.json()[0].Indent;
         this.answer = result.json()[0].Result;
         this.otherdata = result.json()[0].Other_Data;
-        console.log(this.otherdata[0]);
+
         // this.field_name = result.json()[0].Other_Data.More_Details.Field_Name;
         // this.operator_name = result.json()[0].Other_Data.More_Details.Operator_Name;
         // this.county_name = result.json()[0].Other_Data.More_Details.County_Name;
@@ -75,15 +78,14 @@ export class SearchComponent implements OnInit ,OnDestroy {
           console.log(this.answer);
           this.welldocs = result.json()[0].Result.Well_docs;
           this.wellheaders = result.json()[0].Result.Well_headers;
-
         }
-        
       }
       
       else {
         this.answer = result.json()[0].Result;
         this.invalid_search  = true;
-        console.log("INVALID SEARCH ",result.json()[0].Type);
+        console.log("type fail",this.progress);
+        // console.log("INVALID SEARCH ",result.json()[0].Type);
       }
     },
     (error)=>{

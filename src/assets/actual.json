@@ -9,7 +9,7 @@
             "Response_Type": "Structured Data",
             "Response_Time": "",
             "Type": "Success",
-            "Document": "",
+            "Document": "WEll_13/22a/B13.pdf",
             "Question": "show me the type of abc?",
             "Entity": {
                 "WellName": "13/22a-B13"
@@ -20,7 +20,7 @@
                 {
                     "Well_Report": "13_22a-B13.pdf",
                     "Injection_Data": "13_22a-B13_Injection.xlsx",
-                    "Prodution_Data": "13_22a-B13_Production.xlsx",
+                    "Production_Data": "13_22a-B13_Production.xlsx",
                     "Well_Design": "oil image.jpg",
                     "Well_Logs": "13_22a-B13.las"
                 },
@@ -34,7 +34,7 @@
         },
         
         {
-            "Document": "",
+            "Document": "All wells.pdf",
             "Entity": {"CoreType": "DIAMOND"},
             "Intent": "AllWells",
             "NO_OF_DOCS": 5,
@@ -252,43 +252,10 @@
                 {
                     "WellHeader": 0.9586988925933839
                 },
-                "Result": [
-                    {
-                        "Well_Name": "13/22a-B13",
-                        "Operator":"Chevron U.S.A. Inc.",
-                        "Lease_Name": "",
-                        "Status": "Active",
-                        "Type": "Cyclic Steam, Oil & Gas, ",
-                        "Spud_Date": "27-Dec-66",
-                        "Total_Depth": 2486.0,
-                        "Well_design" : "welldesign.jpg"
-                    },
-                    {
-                        "Well_Name": "13/22a-B13",
-                        "Operator":"Garyson Service U.S.A. Inc.",
-                        "Lease_Name": "KCL-E",
-                        "Status": "Active",
-                        "Type": "Cyclic Steam, Oil & Gas, ",
-                        "Spud_Date": "8-Sep-65",
-                        "Total_Depth": 1486.0,
-                        "Well_design" : "welldesign.jpg"
-                        
-                    },
-                    {
-                        "Well_Name": "13/22a-B13",
-                        "Operator":"Chevron U.S.A. Inc.",
-                        "Lease_Name": "",
-                        "Status": "Idle",
-                        "Type": "Cyclic Steam, Oil & Gas, ",
-                        "Spud_Date": "10-Oct-66",
-                        "Total_Depth": 6300.0,
-                        "Well_design" : "welldesign.jpg"
-                        
-                    }
-                ],
+                "Result":"Invalid Search",
                 "Response_Type": "Structured Data",
                 "Response_Time": "",
-                "Type": "Success",
+                "Type": "Fail",
                 "Document": "",
                 "Question": "show me the well header for abc?",
                 "Entity": {

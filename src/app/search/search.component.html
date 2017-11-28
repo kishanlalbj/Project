@@ -1,7 +1,12 @@
 
 <ng-template #errormessage >
-    <h4 style="color:red;margin-top:500px" > Internl Error </h4>
+    <h4 style="color:red;margin-top:500px;margin-left:25%" > Internl Error </h4>
 </ng-template>
+
+<!-- <ng-template #invalid>
+    <h3 style="color:red;margin-left:25%;margin-top:25%">{{ answer }}</h3>
+</ng-template> -->
+
 <ng-template #progressbar>
     
     <div class="container" style="margin-top:50%">
@@ -21,10 +26,6 @@
     </div>
 </ng-template>
 <div *ngIf="!error;else errormessage">
-    
-    <ng-template #invalidmessage>
-        <h4 style="color:red;margin-top:25%;margin-left:25%">{{ answer }}</h4>
-    </ng-template>
     
     <div class="secondRow row">
         
@@ -265,7 +266,9 @@
                 </div>
             </div>
         </div>
-        
+        <div class="col-md-5 col-lg-5" style="margin-left:1%">
+            <h3><strong>Pertro Technical Search for Upstream</strong></h3>                    
+        </div>
         <div class="border col-md-9 col-lg-9">
             
             
@@ -280,179 +283,177 @@
                 </div>
             </div>
             
-            <div *ngIf="!progress;else progressbar"> 
-                <div *ngIf="!edited;else notable" class="col-md-12" style="margin-top:2%">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Results
-                        </div>
-                        <div class="answerPanel panel-body" style="padding:2%" >
-                            <div class= "answer col-md-6 col-lg-6">
-                                {{ answer }}
-                            </div>
-                            
-                            <div class= "col-md-6 col-lg-6">
-                                <p class="tableHeading"> Available data types for this well </p>
-                                <table class="table table-bordered">
-                                    <thead class="tableHeader">
-                                        <tr>
-                                            <th>Well Logs</th>
-                                            <th>Seismic</th>
-                                            <th>Synthesis</th>
-                                            <th> Checkshots </th>
-                                            <th> VSP </th>
-                                            <th> Well Design </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-
-                                            <td> <a>John </a></td>
-                                            <td> <a>Doe </a></td>
-                                            <td> <a>john@example.com </a></td>
-                                            <td> </td>
-                                            <td> </td>
-                                            <td> </td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+            
+            <ng-template #invalid>
+                <div *ngIf="!progress;else progressbar">
+                    <h4 style="color:red;margin-top:0%;margin-left:25%">{{ answer }}</h4>
                 </div>
+            </ng-template>
+            <div *ngIf="!invalid_search else invalid">
                 
-                <ng-template #notable>
-                    <div class="col-md-12" style="margin-top:2%;overflow-x:auto;" >
-                        <table class="table table-hover table -condensed">
-                            <thead>
-                                <tr style="background-color:cornflowerblue">
-                                    <th>Well Name </th>
-                                    <th>Lease Name </th>
-                                    <th>Operator </th>
-                                    <th>Spud Date</th>
-                                    <th>Status</th>
-                                    <th>Total Depth</th>
-                                    <th>Type </th>
-        
-                                </tr>
-                            </thead>
-                            <tbody >
-                                <!-- <tr *ngFor="let x of answer">
-                                    <td> {{ x.Well_Name }} </td>
-                                    <td> {{ x.Operator }} </td>  
-                                    <td> {{ x.Lease_Name }} </td>
-                                    <td> {{ x.Status }}</td>
-                                    <td> {{ x.Type }} </td>
-                                    <td> {{ x.Spud_Date  }} </td>
-                                    <td> {{ x.Total_Depth }} </td>
-                                    <td> 
-                                        <a href="../assets/data/{{ x.well_design }}" target="_blank"> {{ x.Well_design }} </a>       
-                                    </td>
-                                </tr> -->
-
-
-                                <tr *ngFor="let x of wellheaders;let i = index">
-
-                                    <td> {{ x.Well_Name }} </td>
-                                    <td> {{ x.Lease_Name }} </td>
-                                    <td> {{ x.Operator }} </td>
-                                    <td> {{ x.Spud_Date }} </td>
-                                    <td> {{ x.Status }} </td>
-                                    <td> {{ x.Total_Depth }} </td>
-                                    <td> {{ x.Type }} </td>
-
-                                    <td> {{ welldocs[i].checkshot }} </td>
-                                    <td> {{ welldocs[i].Injection_Data }} </td>
-                                    <td> {{ welldocs[i].Production_Data }} </td>
-                                    <td> {{ welldocs[i].Seismic }} </td>
-                                    <td> {{ welldocs[i].Synthetics }} </td>
-                                    <td> {{ welldocs[i].VSP }} </td>
-                                    <td> {{ welldocs[i].Well_Design }} </td>
-                                    <td> {{ welldocs[i].Well_Logs }} </td>
-                                    <td> {{ welldocs[i].Well_Report }} </td>
-                                    
-                                    
-                                       
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </ng-template>
                 
-                <div *ngIf="!invalid_search">
+                <div *ngIf="!progress;else progressbar"> 
                     
-                    <div class="col-md-12">
-                        <div class="panel panel-default" >
-                            <div class="panel-content" style="padding:2%">
-                                
-                                <p>Document :
-                                    
-                                    <a href="../assets/data/{{ document }}" href="../../assets/data/{{document}}" target = "_blank">	{{ document }} </a>
-                                    
-                                </p>
-
-                                <!-- <p>Field Name: {{ data.More_Details.Field_Name }} </p> -->
-
-                                
-                                <!-- <p>Field Name : {{ field_name }} </p> -->
-                                <!-- <p>Operator Name : {{ operator_name}}</p> -->
-                                <!-- <p>County Name: {{ county_name }}</p> -->
-                                
-                            </div>
-                        </div>
-                    </div>
                     
-                    <div class="col-md-12">
+                    
+                    <div *ngIf="!edited;else notable" class="col-md-12" style="margin-top:2%">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                Related Documents
+                                Results
                             </div>
-                            <div class="panel-content" style="padding:2%">
+                            <div class="answerPanel panel-body" style="padding:2%" >
+                                <div class= "answer col-md-6 col-lg-6">
+                                    {{ answer }}
+                                </div>
                                 
-                                <span>
-                                    Well Report :
-                                    <a href="../assets/data/{{well_report}}" target="_blank">
-                                        {{ well_report }} 
-                                    </a>
-                                </span>
-                                <br>
-                                <span>
-                                    Injection Data :
-                                    <a href="../assets/data/{{injection_data}}" target="_blank">
-                                        {{ injection_data }}
-                                    </a>
-                                </span>
-                                <br>
-                                <span>
-                                    Production Data :
-                                    <a href="../assets/data/{{production_data}}" target="_blank">
-                                        {{ production_data }}
-                                    </a>
-                                </span>
-                                <br>
-                                <span>
-                                    Well Designs :
-                                    <a href="../../assets/data/{{ well_design }}" target="_blank">
+                                <div class= "col-md-6 col-lg-6">
+                                    <p class="tableHeading"> Available data types for this well </p>
+                                    <table class="table table-bordered">
+                                        <thead class="tableHeader">
+                                            <tr>
+                                                <th>Well Logs</th>
+                                                <th>Seismic</th>
+                                                <th>Synthesis</th>
+                                                <th>Checkshots </th>
+                                                <th>VSP </th>
+                                                <th>Well Design </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td> 
+                                                    <span>
+                                                        <a href="../assets/data/{{otherdata[0].Related_documents.Well_Logs }}" target="_blank">
+                                                            {{ otherdata[0].Related_documents.Well_Logs }}
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <span>
+                                                        <a href="../../assets/data/{{ otherdata[0].Related_documents.Well_Design }}" target="_blank">
+                                                            {{ otherdata[0].Related_documents.Well_Design }}
+                                                        </a> 
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <ng-template #notable>
+                        <div class="col-md-12" style="margin-top:2%;overflow-x:auto;" >
+                            <table class="table table-hover table -condensed">
+                                <thead>
+                                    <tr style="background-color:cornflowerblue">
+                                        <th>Well Name </th>
+                                        <th>Lease Name </th>
+                                        <th>Operator </th>
+                                        <th>Spud Date</th>
+                                        <th>Status</th>
+                                        <th>Total Depth</th>
+                                        <th>Type </th>
+                                        <th>Checkshot</th>
+                                        <th>Injection Data</th>
+                                        <th>Production_Data</th>
+                                        <th>Seismic</th>
+                                        <th>Synthetics</th>
+                                        <th>VSP</th>
+                                        <th>Well_Design</th>
+                                        <th>Well Logs</th>
+                                        <th>Well_Report</th>
                                         
-                                        {{ well_design }}
-                                    </a>
-                                </span>
-                                <br>
-                                <span>
-                                    Well Logs :
-                                    <a href="../assets/data/{{well_logs}}" target="_blank">
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <tr *ngFor="let x of wellheaders;let i = index">
                                         
-                                        {{ well_logs }}
-                                    </a>
-                                </span>
+                                        <td> {{ x.Well_Name }} </td>
+                                        <td> {{ x.Lease_Name }} </td>
+                                        <td> {{ x.Operator }} </td>
+                                        <td> {{ x.Spud_Date }} </td>
+                                        <td> {{ x.Status }} </td>
+                                        <td> {{ x.Total_Depth }} </td>
+                                        <td> {{ x.Type }} </td>
+                                        
+                                        <td> {{ welldocs[i].checkshot }} </td>
+                                        <td> {{ welldocs[i].Injection_Data }} </td>
+                                        <td> {{ welldocs[i].Production_Data }} </td>
+                                        <td> {{ welldocs[i].Seismic }} </td>
+                                        <td> {{ welldocs[i].Synthetics }} </td>
+                                        <td> {{ welldocs[i].VSP }} </td>
+                                        <td> {{ welldocs[i].Well_Design }} </td>
+                                        <td> {{ welldocs[i].Well_Logs }} </td>
+                                        <td> {{ welldocs[i].Well_Report }} </td>
+                                    </tr>    
+                                </tbody>
+                            </table>
+                        </div>
+                    </ng-template>
+                    
+                    <div>
+                        
+                        <div class="col-md-12">
+                            <p>
+                                <strong> Document :</strong>                                      
+                                <a href="../assets/data/{{ document }}" href="../../assets/data/{{document}}" target = "_blank">	{{ document }} </a> 
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-12" *ngFor="let x of otherdata">
+                            <div class="panel panel-default" >
+                                <div class="panel-content" style="padding:2%">
+                                    <div>
+                                        <p> <strong>  Field Name :</strong> {{ x.More_Details.Field_Name }} </p> 
+                                        <p><strong>Operator Name: </strong> {{ x.More_Details.Operator_Name }} </p>
+                                        <p> <strong>  County :</strong>  {{x.More_Details.County_Name}} </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    Related Documents
+                                </div>
+                                <div class="panel-content" style="padding:2%" *ngFor="let x of otherdata">
+                                    
+                                    <span>
+                                        <strong>Well Report :</strong> 
+                                        <a href="../assets/data/{{ x.Related_documents.Well_Report}}" target="_blank">
+                                            {{ x.Related_documents.Well_Report }} 
+                                        </a>
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <strong>Injection Data :</strong> 
+                                        <a href="../assets/data/{{ x.Related_documents.Injection_Data }}" target="_blank">
+                                            {{otherdata[0].Related_documents.Injection_Data }}
+                                        </a>
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <strong> Production Data :</strong>
+                                        <a href="../assets/data/{{ x.Related_documents.Production_Data }}" target="_blank">
+                                            {{ x.Related_documents.Production_Data }}
+                                        </a>
+                                    </span>
+                                    <hr> 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>   
     </div>
 </div>
