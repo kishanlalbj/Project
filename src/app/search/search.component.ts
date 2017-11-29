@@ -1,3 +1,4 @@
+import { KeyPipe } from './../key.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Subscription } from 'rxjs/Subscription';
 import { Component, OnInit ,OnDestroy} from '@angular/core';
@@ -52,6 +53,9 @@ export class SearchComponent implements OnInit ,OnDestroy {
       console.log(question);
       if(result.json()[0].Type == "Success") {
         console.log("VALID SEARCH");
+        this.p = 1;
+        this.pp = 1;
+        this.ppp = 1;
         this.invalid_search = false;
         this.document = result.json()[0].Document;
         this.answer = result.json()[0].Result;
@@ -64,6 +68,10 @@ export class SearchComponent implements OnInit ,OnDestroy {
           this.edited = true;
           this.coredata= true;
           console.log(result.json()[0].is_core_data);
+
+          // for(let prop in result.json()[0].Result[0]) {
+          //   console.log(prop);
+          // }
         }
          if(result.json()[0].is_core_data) {
           alert("It is core data");

@@ -14,6 +14,7 @@ import { DataService } from './data.service';
 // import { HomeModule } from './home/home.module';
 import { SearchComponent } from './search/search.component';
 import { AdminComponent } from './admin/admin.component';
+import { KeyPipe } from './key.pipe';
 // import { NewComponent } from './new/new.component';
 
 
@@ -33,6 +34,7 @@ const routes: Routes = [
 	HomeComponent,
 	SearchComponent,
 	AdminComponent,
+	KeyPipe,
 	// NewComponent
 	],
 
