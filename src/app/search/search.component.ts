@@ -26,37 +26,46 @@ export class SearchComponent implements OnInit ,OnDestroy {
   welldocs:any = [];
   wellheaders:any = [];
   otherdata:any = [];
-  
+  coredata:boolean = true;
+  core:any = [];
+
   constructor(private dataservice:DataService,private ref: ChangeDetectorRef) {
     
   }
   
+  modal(i) {
+    // alert(i);
+    this.core =  this.answer[i].core_data;
+  }
+
   search(question) {
     
     this.progress = true;
 
     
     this.dataservice.getData(question).subscribe((result:Response) =>{
-      this.progress = false;
       
-  
+      this.progress = false;
+      console.log(question);
       if(result.json()[0].Type == "Success") {
         console.log("VALID SEARCH");
         this.invalid_search = false;
         this.document = result.json()[0].Document;
-        this.result = result.json()[0].Indent;
         this.answer = result.json()[0].Result;
         this.otherdata = result.json()[0].Other_Data;
-   
-
+ 
         if(typeof this.answer == "string") {
           this.edited = false;
         }
-        else if(typeof this.answer == "object") {
+        else if(typeof this.answer == "object" ) {
           this.edited = true;
-          console.log(this.answer);
-          this.welldocs = result.json()[0].Result.Well_docs;
-          this.wellheaders = result.json()[0].Result.Well_headers;
+          this.coredata= true;
+          console.log(result.json()[0].is_core_data);
+        }
+         if(result.json()[0].is_core_data) {
+          alert("It is core data");
+          this.coredata = false;
+         
         }
       }
       
@@ -76,6 +85,7 @@ export class SearchComponent implements OnInit ,OnDestroy {
     
     this.subscription = this.dataservice.getQuestion().subscribe(data =>{
     this.question = data;
+    console.log("ON INIT",this.question)
     })
     this.search(this.question);
   }
