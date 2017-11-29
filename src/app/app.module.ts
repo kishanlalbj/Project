@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
 	BrowserAnimationsModule,
 	HttpModule,
 	FormsModule,
+	NgxPaginationModule
 	],
 	providers: [DataService,CsvgeneratorService],
 	bootstrap: [AppComponent]

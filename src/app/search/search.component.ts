@@ -28,6 +28,9 @@ export class SearchComponent implements OnInit ,OnDestroy {
   otherdata:any = [];
   coredata:boolean = true;
   core:any = [];
+  p: number = 1;
+  pp:number = 1;
+  ppp:number = 1;
 
   constructor(private dataservice:DataService,private ref: ChangeDetectorRef) {
     

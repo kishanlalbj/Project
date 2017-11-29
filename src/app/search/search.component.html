@@ -4,14 +4,14 @@
 </ng-template>
 
 <ng-template #progressbar>
-    <div style="margin-left:30%;margin-top:20%" class="loader"></div>
+    <div style="margin-left:44%;margin-top:20%" class="loader"></div>
 </ng-template>
 
 <div *ngIf="!error;else errormessage">
     
     <div class="secondRow row">
         
-        <div class= " col-md-3 col-lg-3">
+        <!-- <div class= " col-md-3 col-lg-3">
             
             <div class="panel-group">
                 <div class="panel panel-primary">
@@ -246,10 +246,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         
-        <div class="border col-md-9 col-lg-9">
+        <div class="border col-md-12 col-lg-12">
             
             
             <div id='search-box'>
@@ -377,7 +377,7 @@
                         
                         <div class="col-md-12" style="margin-top:2%;overflow-x:auto;" >
                             <ng-template #coretable>
-                             <h4>Core data display</h4>
+                            
                              <!-- ***************************************************** -->
                                 <table class="table table-hover">
                                     <thead>
@@ -391,7 +391,7 @@
                                         <th>Core Data</th>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let x of answer;let i = index">
+                                        <tr *ngFor="let x of answer | paginate: { itemsPerPage: 2, currentPage: p };let i = index">
                                                 <td>{{ x.Well_name }}</td>
                                                 <td>{{ x.Lease_Name }}</td>
                                                 <td>{{ x.Operator }}</td>
@@ -402,7 +402,9 @@
                                                 <td><a data-toggle="modal" (click)="modal(i)"  data-target="#myModal">Click</a></td>
                                         </tr>
                                     </tbody>
+                                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
                                 </table>
+                              
 
                              
                                 <!-- Modal -->
@@ -480,7 +482,7 @@
                                     </thead>
                                     <tbody >
                                         
-                                        <tr *ngFor="let x of answer;let i = index">
+                                        <tr *ngFor="let x of answer | paginate: { itemsPerPage: 5, currentPage: pp };let i = index">
                                             <td>{{ x.Well_name }}</td>
                                             <td>{{ x.Lease_Name }}</td>
                                             <td>{{ x.Operator }}</td>
@@ -499,11 +501,13 @@
                                         
                                     </tbody>
                                 </table>
+                                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                                
                             </div>
                         </div>
                         
                         <div class="col-md-12">
-                            <div class="panel panel-primary" *ngFor="let x of answer">
+                            <div class="panel panel-primary" *ngFor="let x of answer  | paginate: { itemsPerPage: 3, currentPage: ppp }">
                                 
                                 <div class="panel-heading">
                                     {{ x.Well_name }}
@@ -545,6 +549,8 @@
                                     </p>
                                 </div>
                             </div>
+                            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                            
                         </div>
                         
                     </ng-template>
