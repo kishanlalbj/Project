@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Http ,Response} from '@angular/http';
 import { DataService } from './data.service';
+declare var jquery:any;
+declare var $ :any;
 
 
 
@@ -13,8 +15,7 @@ import { DataService } from './data.service';
 
 
 export class AppComponent {
-  title = 'app';
-
+  
   onDeactivate() {
       document.body.scrollTop = 0;
   }alldata:any = [];

@@ -1,0 +1,28 @@
+
+.navbar {
+	background-color: #ffffff;
+	/*background: transparent;*/
+	border-style: none;
+	border-color: #fff;
+	box-shadow:  0 4px 8px 0 rgba(0,0,0,0.3);
+	height: 107px;
+}
+.navbar-nav{
+	padding:13px;
+	line-height: 80px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: black;
+}
+
+#wiprologo{
+	margin: 0;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.navbar-brand{
+	padding: 0;
+}
+/*.and{
+	margin-top: 25px;
+}*/

@@ -13,7 +13,7 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 
 export class SearchComponent implements OnInit ,OnDestroy {
-  
+
   error:boolean = false;
   progress:boolean=false;
   invalid_search:boolean = false;
@@ -32,75 +32,116 @@ export class SearchComponent implements OnInit ,OnDestroy {
   p: number = 1;
   pp:number = 1;
   ppp:number = 1;
+  intentFromSearch:any;
+  comment:any;
+  feedsuccess:boolean= false;
+  toshow:boolean = false;
+  
+  isDocument:boolean = false;
 
   constructor(private dataservice:DataService,private ref: ChangeDetectorRef) {
-    
+
   }
-  
+
   modal(i) {
     // alert(i);
     this.core =  this.answer[i].core_data;
   }
 
   search(question) {
-    
+
     this.progress = true;
 
-    
+
     this.dataservice.getData(question).subscribe((result:Response) =>{
-      
+        console.log(result.json()[0]);
       this.progress = false;
-      console.log(question);
-      if(result.json()[0].Type == "Success") {
+      if(result.json()[0].Type === "Success") {
         console.log("VALID SEARCH");
         this.p = 1;
         this.pp = 1;
         this.ppp = 1;
         this.invalid_search = false;
-        this.document = result.json()[0].Document;
+        this.intentFromSearch = result.json()[0].Intent;
+        this.question = result.json()[0].Question;
+		
+		if(result.json()[0].Document == "" || result.json()[0].Document === "Not Available") {
+			
+			this.isDocument = true;
+			this.document = "N/A"
+		}
+		else {
+			this.document = result.json()[0].Document;
+			this.isDocument = false;
+		}
+		
         this.answer = result.json()[0].Result;
         this.otherdata = result.json()[0].Other_Data;
- 
+		
         if(typeof this.answer == "string") {
           this.edited = false;
         }
         else if(typeof this.answer == "object" ) {
           this.edited = true;
           this.coredata= true;
-          console.log(result.json()[0].is_core_data);
-
-          // for(let prop in result.json()[0].Result[0]) {
-          //   console.log(prop);
-          // }
+          console.log(result.json()[0].is_core_data);  
         }
          if(result.json()[0].is_core_data) {
-          alert("It is core data");
+        
           this.coredata = false;
-         
+
         }
       }
-      
+
       else {
         this.answer = result.json()[0].Result;
         this.invalid_search  = true;
-        console.log("type fail",this.progress);
+        
       }
     },
     (error)=>{
       this.error = true;
-      alert("error from server");
+     
     })
   }
-  
-  ngOnInit() {
+
+  feedback(){
     
+         this.toshow = false;
+      }
+    
+    
+      feedbacksubmit(comment) {
+        console.log(comment);
+        console.log(this.intentFromSearch);
+        let feed = {
+          "question":this.question,
+          "oldintent":this.intentFromSearch,
+          "comment":comment,
+          "processed":false
+        }
+
+        this.dataservice.sendfeedback(feed).subscribe((res:Response)=>{
+          console.log("POSTED");
+          this.toshow = true;
+          this.feedsuccess = true;
+        },(error)=>{
+          console.log("NOT POSTED");
+          this.toshow=true;
+          this.feedsuccess = false;
+        })
+    
+      }
+
+  ngOnInit() {
+
     this.subscription = this.dataservice.getQuestion().subscribe(data =>{
     this.question = data;
-    console.log("ON INIT",this.question)
+
     })
     this.search(this.question);
   }
-  
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

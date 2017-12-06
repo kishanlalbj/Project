@@ -1,22 +1,37 @@
-<div>
-        <h3><strong>Petro Technical Search For Upstream</strong></h3>    
-    </div>
 
-<div id="home" class="container">
-    
-    <div style="margin-left:1000px;">
-        <a routerLink="../login" >logout</a>
-    </div>
-    
-    <div id='search-box'>
-        <div  id='search-form'>
+
+<!--    <div id='search-box'>
+       
             <form id="homesearch" role="form">
                 <input id='search-text' name='q'[(ngModel)]="question" placeholder='Search' type='text'/>
                 <button id='search-button' type='submit' (click)="sendquestion(question)">
                     <span>Search</span>
                 </button>
             </form>
-        </div>
-    </div>
-</div>
+       
+    </div> -->
+	
+	
+	
+	<div class="container">
+		<div class="row">
+		
+		<div class="center" align="center">
+		
+		<!--	<img src="assets/wordcloud.svg" width="50%" alt="home">-->
+		<h1 id="title">Petro Technical Search For Upstream</h1>
+			
+	
+			<form role="form" style="padding-top:2%">
+					<input name='q' class="form-control" [(ngModel)]="question" placeholder="Search">
+					<br>
+					<button class="btn btn-primary" type="submit" (click)="sendquestion(question)">Search</button>
+			</form>
+
+		</div>					
+	</div>
+			
+						
+	</div>
+
 

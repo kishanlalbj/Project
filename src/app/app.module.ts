@@ -3,19 +3,25 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgxPaginationModule} from 'ngx-pagination';
-import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule} from 'ngx-pagination';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CsvgeneratorService } from "./csvgenerator.service";
 import { DataService } from './data.service';
-// import { HomeModule } from './home/home.module';
 import { SearchComponent } from './search/search.component';
 import { AdminComponent } from './admin/admin.component';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
+import { Ng4FilesModule } from 'angular4-files-upload';
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+
+
+
+
 import { KeyPipe } from './key.pipe';
-// import { NewComponent } from './new/new.component';
+
 
 
 const routes: Routes = [
@@ -35,7 +41,8 @@ const routes: Routes = [
 	SearchComponent,
 	AdminComponent,
 	KeyPipe,
-	// NewComponent
+	FileSelectDirective
+
 	],
 
 	imports: [
@@ -44,7 +51,10 @@ const routes: Routes = [
 	BrowserAnimationsModule,
 	HttpModule,
 	FormsModule,
-	NgxPaginationModule
+	ReactiveFormsModule,
+	NgxPaginationModule,
+	MultiselectDropdownModule,
+	Ng4FilesModule 
 	],
 	providers: [DataService,CsvgeneratorService],
 	bootstrap: [AppComponent]

@@ -1,716 +1,782 @@
- { "data":[ 
-   {
-      "Intent":"AllWells",
-      "Result":[
-         {
-            "core_data":[
-               {
-                  "CoreId":"1",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1236.0",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"1.54",
-                  "IntervalThickness":"3.25",
-                  "CoreLength":"1.54"
-               },
-               {
-                  "CoreId":"2",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1239.25",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"8.95",
-                  "IntervalThickness":"14.15",
-                  "CoreLength":"9.4"
-               }
-            ],
-            "Well_name":"HOME SCURRY CLEARHILLS 1-26-87-12",
-            "Operator":"N/A",
-            "Lease_Name":"N/A",
-            "Status":"LIC",
-            "Type":"N/A",
-            "Spud_Date":"29-JAN-90",
-            "Total_Depth":"N/A",
-            "Lithology":"N/A",
-            "FieldName":"N/A",
-            "County_Name":"WHEATLAND",
-            "Region":"CA",
-            "Location":"CA",
-            "Asset_Name":"WHEATLAND",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+{
+  "data": [
+    {
+      "Intent": "AllWells",
+      "Result": [
+        {
+          "core_data": [
+            {
+              "CoreId": "1",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1236.0",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "1.54",
+              "IntervalThickness": "3.25",
+              "CoreLength": "1.54"
+            },
+            {
+              "CoreId": "2",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1239.25",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "8.95",
+              "IntervalThickness": "14.15",
+              "CoreLength": "9.4"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"1",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1207.6199999999999",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"3.99",
-                  "IntervalThickness":"15.24",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"HOME ET AL DOIG RIVER 2-22-90-12",
-            "Operator":"N/A",
-            "Lease_Name":"N/A",
-            "Status":"LIC",
-            "Type":"N/A",
-            "Spud_Date":"18-FEB-63",
-            "Total_Depth":"N/A",
-            "Lithology":"N/A",
-            "FieldName":"N/A",
-            "County_Name":"WHEATLAND",
-            "Region":"CA",
-            "Location":"CA",
-            "Asset_Name":"WHEATLAND",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "HOME SCURRY CLEARHILLS 1-26-87-12",
+          "Operator": "N/A",
+          "Lease_Name": "N/A",
+          "Status": "LIC",
+          "Type": "N/A",
+          "Spud_Date": "29-JAN-90",
+          "Total_Depth": "N/A",
+          "Lithology": "N/A",
+          "FieldName": "N/A",
+          "County_Name": "WHEATLAND",
+          "Region": "CA",
+          "Location": "CA",
+          "Asset_Name": "WHEATLAND",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "1",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1207.6199999999999",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "3.99",
+              "IntervalThickness": "15.24",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"1",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"937.89999999999998",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"10.02",
-                  "IntervalThickness":"14.78",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"MANNING KRANZ TILSTON 4 5 6 29",
-            "Operator":"M00010",
-            "Lease_Name":"N/A",
-            "Status":"LIC",
-            "Type":"N/A",
-            "Spud_Date":"21-DEC-58",
-            "Total_Depth":"N/A",
-            "Lithology":"N/A",
-            "FieldName":"N/A",
-            "County_Name":"SELKIRK",
-            "Region":"CA",
-            "Location":"CA",
-            "Asset_Name":"SELKIRK",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "HOME ET AL DOIG RIVER 2-22-90-12",
+          "Operator": "N/A",
+          "Lease_Name": "N/A",
+          "Status": "LIC",
+          "Type": "N/A",
+          "Spud_Date": "18-FEB-63",
+          "Total_Depth": "N/A",
+          "Lithology": "N/A",
+          "FieldName": "N/A",
+          "County_Name": "WHEATLAND",
+          "Region": "CA",
+          "Location": "CA",
+          "Asset_Name": "WHEATLAND",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "1",
+              "CoreType": "DIAMOND",
+              "TopDepth": "937.89999999999998",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "10.02",
+              "IntervalThickness": "14.78",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"1",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1032.6600000000001",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"5.01",
-                  "IntervalThickness":"7.32",
-                  "CoreLength":"5.71"
-               }
-            ],
-            "Well_name":"HB SHELL CLEAR PRAIRIE 4-32-91-12",
-            "Operator":"N/A",
-            "Lease_Name":"N/A",
-            "Status":"LIC",
-            "Type":"N/A",
-            "Spud_Date":"17-FEB-64",
-            "Total_Depth":"N/A",
-            "Lithology":"N/A",
-            "FieldName":"N/A",
-            "County_Name":"WHEATLAND",
-            "Region":"CA",
-            "Location":"CA",
-            "Asset_Name":"WHEATLAND",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "MANNING KRANZ TILSTON 4 5 6 29",
+          "Operator": "M00010",
+          "Lease_Name": "N/A",
+          "Status": "LIC",
+          "Type": "N/A",
+          "Spud_Date": "21-DEC-58",
+          "Total_Depth": "N/A",
+          "Lithology": "N/A",
+          "FieldName": "N/A",
+          "County_Name": "SELKIRK",
+          "Region": "CA",
+          "Location": "CA",
+          "Asset_Name": "SELKIRK",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "1",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1032.6600000000001",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "5.01",
+              "IntervalThickness": "7.32",
+              "CoreLength": "5.71"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"1",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1420.0",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"0.91",
-                  "IntervalThickness":"1.8",
-                  "CoreLength":"1.8"
-               },
-               {
-                  "CoreId":"2",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1428.0",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"0.59",
-                  "IntervalThickness":"7.7",
-                  "CoreLength":"2.14"
-               },
-               {
-                  "CoreId":"3",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1431.2",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"1.33",
-                  "IntervalThickness":"3.15",
-                  "CoreLength":"3.15"
-               },
-               {
-                  "CoreId":"4",
-                  "CoreType":"DIAMOND",
-                  "TopDepth":"1433.0",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"3.78",
-                  "IntervalThickness":"10.0",
-                  "CoreLength":"7.45"
-               }
-            ],
-            "Well_name":"WESTCOAST AMOCO PRESPATOU 6-27-88-12",
-            "Operator":"N/A",
-            "Lease_Name":"N/A",
-            "Status":"LIC",
-            "Type":"N/A",
-            "Spud_Date":"31-DEC-88",
-            "Total_Depth":"N/A",
-            "Lithology":"N/A",
-            "FieldName":"N/A",
-            "County_Name":"WHEATLAND",
-            "Region":"CA",
-            "Location":"CA",
-            "Asset_Name":"WHEATLAND",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "HB SHELL CLEAR PRAIRIE 4-32-91-12",
+          "Operator": "N/A",
+          "Lease_Name": "N/A",
+          "Status": "LIC",
+          "Type": "N/A",
+          "Spud_Date": "17-FEB-64",
+          "Total_Depth": "N/A",
+          "Lithology": "N/A",
+          "FieldName": "N/A",
+          "County_Name": "WHEATLAND",
+          "Region": "CA",
+          "Location": "CA",
+          "Asset_Name": "WHEATLAND",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "1",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1420.0",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "0.91",
+              "IntervalThickness": "1.8",
+              "CoreLength": "1.8"
+            },
+            {
+              "CoreId": "2",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1428.0",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "0.59",
+              "IntervalThickness": "7.7",
+              "CoreLength": "2.14"
+            },
+            {
+              "CoreId": "3",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1431.2",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "1.33",
+              "IntervalThickness": "3.15",
+              "CoreLength": "3.15"
+            },
+            {
+              "CoreId": "4",
+              "CoreType": "DIAMOND",
+              "TopDepth": "1433.0",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "3.78",
+              "IntervalThickness": "10.0",
+              "CoreLength": "7.45"
             }
-         }
+          ],
+          "Well_name": "WESTCOAST AMOCO PRESPATOU 6-27-88-12",
+          "Operator": "N/A",
+          "Lease_Name": "N/A",
+          "Status": "LIC",
+          "Type": "N/A",
+          "Spud_Date": "31-DEC-88",
+          "Total_Depth": "N/A",
+          "Lithology": "N/A",
+          "FieldName": "N/A",
+          "County_Name": "WHEATLAND",
+          "Region": "CA",
+          "Location": "CA",
+          "Asset_Name": "WHEATLAND",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        }
       ],
-      "Response_Type":"All Data Sets",
-      "Response_Time":"",
-      "Type":"Success",
-      "Document":"",
-      "Question":"show me the wells where core type is diamond",
-      "Entity":{
-         "CoreType":"DIAMOND"
+      "Response_Type": "All Data Sets",
+      "Response_Time": "",
+      "Type": "Success",
+      "Document": "",
+      "Question": "show me the wells where core type is diamond",
+      "Entity": {
+        "CoreType": "DIAMOND"
       },
-      "Other_Data":{
-         "Filter_data":{
-
-         },
-         "Related_documents":[
-
-         ],
-         "More_Details":{
-
-         }
+      "Other_Data": {
+        "Filter_data": {},
+        "Related_documents": [],
+        "More_Details": {}
       },
-      "is_core_data":true
-   },
-   {
-      "Intent":"AllWells",
-      "Result":[
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"13/22a-B13z",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Kern County Land Co. Lease 39",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"5-Oct-64",
-            "Total_Depth":"1435",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr SW cor 1527N 1620E",
-            "Location":"Fr SW cor 1527N 1620E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"13_22a-B13z.pdf",
-               "Injection_Data":"Not Available",
-               "Production_Data":"13_22a-B13z_Production.xlsx",
-               "Well_Design":"Not Available",
-               "Well_Logs":"13_22a-B13z.las",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+      "is_core_data": true
+    },
+    {
+      "Intent": "AllWells",
+      "Result": [
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"Chicago Crude 63",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Chicago Crude",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"25-Oct-66",
-            "Total_Depth":"2945",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr NW cor 1112S 2580E",
-            "Location":"Fr NW cor 1112S 2580E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Chicago Crude 63_Injection.xlsx",
-               "Production_Data":"Chicago Crude 63_Production.xlsx",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Chicago Crude 63.las",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "13/22a-B13z",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Kern County Land Co. Lease 39",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "5-Oct-64",
+          "Total_Depth": "1435",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr SW cor 1527N 1620E",
+          "Location": "Fr SW cor 1527N 1620E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "13_22a-B13z.pdf",
+            "Injection_Data": "Not Available",
+            "Production_Data": "13_22a-B13z_Production.xlsx",
+            "Well_Design": "Not Available",
+            "Well_Logs": "13_22a-B13z.las",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"Monte Cristo No. 2 37",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Monte Cristo No. 2",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"7-Jun-57",
-            "Total_Depth":"5964",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr SE cor 1900N 897W",
-            "Location":"Fr SE cor 1900N 897W",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Monte Cristo No. 2 37_Injection.xlsx",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "Chicago Crude 63",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Chicago Crude",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "25-Oct-66",
+          "Total_Depth": "2945",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr NW cor 1112S 2580E",
+          "Location": "Fr NW cor 1112S 2580E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Chicago Crude 63_Injection.xlsx",
+            "Production_Data": "Chicago Crude 63_Production.xlsx",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Chicago Crude 63.las",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"Globe 38",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Globe",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"16-Dec-66",
-            "Total_Depth":"2945",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr NW cor 4163S 4408E",
-            "Location":"Fr NW cor 4163S 4408E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "Monte Cristo No. 2 37",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Monte Cristo No. 2",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "7-Jun-57",
+          "Total_Depth": "5964",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr SE cor 1900N 897W",
+          "Location": "Fr SE cor 1900N 897W",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Monte Cristo No. 2 37_Injection.xlsx",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"U.S.A. 2",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"U.S.A.",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"1-Dec-66",
-            "Total_Depth":"4232",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr SE cor 500N 1790W",
-            "Location":"Fr SE cor 500N 1790W",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "Globe 38",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Globe",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "16-Dec-66",
+          "Total_Depth": "2945",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr NW cor 4163S 4408E",
+          "Location": "Fr NW cor 4163S 4408E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"Green & Whittier A 95",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Green & Whittier A",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"31-Oct-66",
-            "Total_Depth":"4232",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr NW cor 4378S 1220E",
-            "Location":"Fr NW cor 4378S 1220E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Green & Whittier A 95_Injection.xlsx",
-               "Production_Data":"Green & Whittier A 95_Production.xlsx",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "U.S.A. 2",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "U.S.A.",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "1-Dec-66",
+          "Total_Depth": "4232",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr SE cor 500N 1790W",
+          "Location": "Fr SE cor 500N 1790W",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"Kern Oil & Development 11",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Kern Oil & Development",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"27-Oct-66",
-            "Total_Depth":"2514",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr NW cor 2068S 706E",
-            "Location":"Fr NW cor 2068S 706E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Kern Oil & Development 11_Injection.xlsx",
-               "Production_Data":"Kern Oil & Development 11_Production.xlsx",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "Green & Whittier A 95",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Green & Whittier A",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "31-Oct-66",
+          "Total_Depth": "4232",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr NW cor 4378S 1220E",
+          "Location": "Fr NW cor 4378S 1220E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Green & Whittier A 95_Injection.xlsx",
+            "Production_Data": "Green & Whittier A 95_Production.xlsx",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"Cortez 24",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Cortez",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"7-Nov-66",
-            "Total_Depth":"3912",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr NW cor 3467S 1318E",
-            "Location":"Fr NW cor 3467S 1318E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "Kern Oil & Development 11",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Kern Oil & Development",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "27-Oct-66",
+          "Total_Depth": "2514",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr NW cor 2068S 706E",
+          "Location": "Fr NW cor 2068S 706E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Kern Oil & Development 11_Injection.xlsx",
+            "Production_Data": "Kern Oil & Development 11_Production.xlsx",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"San Joaquin 283",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"San Joaquin",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"5-Oct-66",
-            "Total_Depth":"3635",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr NW cor 1301S 4780E",
-            "Location":"Fr NW cor 1301S 4780E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "Cortez 24",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Cortez",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "7-Nov-66",
+          "Total_Depth": "3912",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr NW cor 3467S 1318E",
+          "Location": "Fr NW cor 3467S 1318E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"Chaparral 16-25",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":"Chaparral",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"30-Sep-66",
-            "Total_Depth":"5034",
-            "Lithology":"N/A",
-            "FieldName":"Kern River",
-            "County_Name":"Kern",
-            "Region":"Fr NW cor 545S 1642E",
-            "Location":"Fr NW cor 545S 1642E",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available1",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "San Joaquin 283",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "San Joaquin",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "5-Oct-66",
+          "Total_Depth": "3635",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr NW cor 1301S 4780E",
+          "Location": "Fr NW cor 1301S 4780E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         },
-         {
-            "core_data":[
-               {
-                  "CoreId":"0",
-                  "CoreType":"N/A",
-                  "TopDepth":"N/A",
-                  "CoreDiameter":"N/A",
-                  "PorosityLength":"N/A",
-                  "IntervalThickness":"N/A",
-                  "CoreLength":"N/A"
-               }
-            ],
-            "Well_name":"1-Jul",
-            "Operator":"Chevron U.S.A. Inc.",
-            "Lease_Name":" ",
-            "Status":"P",
-            "Type":"OG, SC",
-            "Spud_Date":"8-Dec-66",
-            "Total_Depth":"3912",
-            "Lithology":"N/A",
-            "FieldName":"Kern River1",
-            "County_Name":"Kern",
-            "Region":"Fr N/4 cor 110S 300W",
-            "Location":"Fr N/4 cor 110S 300W",
-            "Asset_Name":"Kern",
-            "well_docs":{
-               "Well_Report":"Not Available",
-               "Injection_Data":"Not Available",
-               "Production_Data":"Not Available",
-               "Well_Design":"Not Available",
-               "Well_Logs":"Not Available",
-               "Seismic":"Not Available",
-               "Synthetics":"Not Available",
-               "Checkshot":"Not Available",
-               "VSP":"Not Available"
+          ],
+          "Well_name": "Chaparral 16-25",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": "Chaparral",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "30-Sep-66",
+          "Total_Depth": "5034",
+          "Lithology": "N/A",
+          "FieldName": "Kern River",
+          "County_Name": "Kern",
+          "Region": "Fr NW cor 545S 1642E",
+          "Location": "Fr NW cor 545S 1642E",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available1",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        },
+        {
+          "core_data": [
+            {
+              "CoreId": "0",
+              "CoreType": "N/A",
+              "TopDepth": "N/A",
+              "CoreDiameter": "N/A",
+              "PorosityLength": "N/A",
+              "IntervalThickness": "N/A",
+              "CoreLength": "N/A"
             }
-         }
+          ],
+          "Well_name": "1-Jul",
+          "Operator": "Chevron U.S.A. Inc.",
+          "Lease_Name": " ",
+          "Status": "P",
+          "Type": "OG, SC",
+          "Spud_Date": "8-Dec-66",
+          "Total_Depth": "3912",
+          "Lithology": "N/A",
+          "FieldName": "Kern River1",
+          "County_Name": "Kern",
+          "Region": "Fr N/4 cor 110S 300W",
+          "Location": "Fr N/4 cor 110S 300W",
+          "Asset_Name": "Kern",
+          "well_docs": {
+            "Well_Report": "Not Available",
+            "Injection_Data": "Not Available",
+            "Production_Data": "Not Available",
+            "Well_Design": "Not Available",
+            "Well_Logs": "Not Available",
+            "Seismic": "Not Available",
+            "Synthetics": "Not Available",
+            "Checkshot": "Not Available",
+            "VSP": "Not Available"
+          }
+        }
       ],
-      "Response_Type":"All Data Sets",
-      "Response_Time":"",
-      "Type":"Success",
-      "Document":"",
-      "Question":"show mw all the wells where status is P and type is OG,SC",
-      "Entity":{
-         "Status":"P",
-         "Type":"OG, SC"
+      "Response_Type": "All Data Sets",
+      "Response_Time": "",
+      "Type": "Success",
+      "Document": "",
+      "Question": "show me all the wells where status is P and type is OG,SC",
+      "Entity": {
+        "Status": "P",
+        "Type": "OG, SC"
       },
-      "Other_Data":{
-         "Filter_data":{
-
-         },
-         "Related_documents":[
-
-         ],
-         "More_Details":{
-
-         }
+      "Other_Data": {
+        "Filter_data": {},
+        "Related_documents": [],
+        "More_Details": {}
       },
-      "is_core_data":false
-   },
-   {
-      "Type":"Success",
-      "Document":"Not Available",
-      "Result":" The well 13/22a-B13 has the Operator name Chevron U.S.A. Inc.",
-      "Intent":{
-         "Operator":0.9001408576965333
+      "is_core_data": false
+    },
+    {
+      "Type": "Success",
+      "Document": "Not Available",
+      "Result": " The well 13/22a-B13 has the Operator name Chevron U.S.A. Inc.",
+      "Intent": {
+        "Operator": 0.9001408576965333
       },
-      "Response_Type":" Structured Data",
-      "Other_Data":{
-         "More_Details":{
-            "County_Name":"Kern",
-            "Field_Name":"Kern River",
-            "Operator_Name":"Chevron U.S.A. Inc."
-         },
-         "Filter_data":{
-
-         },
-         "Well_Documents":{
-            "Well_Design":"Not Available",
-            "Well_Report":"13_22a-B13.pdf",
-            "Checkshot":"Not Available",
-            "Production_Data":"13_22a-B13_Production.xlsx",
-            "Well_Logs":"13_22a-B13.las",
-            "Injection_Data":"Not Available",
-            "VSP":"Not Available",
-            "Seismic":"Not Available",
-            "Synthetics":"Not Available"
-         }
+      "Response_Type": " Structured Data",
+      "Other_Data": {
+        "More_Details": {
+          "County_Name": "Kern",
+          "Field_Name": "Kern River",
+          "Operator_Name": "Chevron U.S.A. Inc."
+        },
+        "Filter_data": {},
+        "Well_Documents": {
+          "Well_Design": "Not Available",
+          "Well_Report": "13_22a-B13.pdf",
+          "Checkshot": "Not Available",
+          "Production_Data": "13_22a-B13_Production.xlsx",
+          "Well_Logs": "13_22a-B13.las",
+          "Injection_Data": "Not Available",
+          "VSP": "Not Available",
+          "Seismic": "Not Available",
+          "Synthetics": "Not Available"
+        }
       },
-      "Entity":{
-         "WellName":"13/22a-B13"
+      "Entity": {
+        "WellName": "13/22a-B13"
       },
-      "Response_Time":"",
-      "Question":"operator of 13/22a-b13"
-   }
-]}
+      "Response_Time": "",
+      "Question": "operator of 13/22a-b13"
+    }
+  ],
+  "feedback": [
+    {
+      "question": "Tell me the total depth of 210/3a-4Z well?",
+      "oldintent": "Allwells",
+      "newintent": "TotalDepth",
+      "comment": "intent is wrong",
+      "processed":false
+    },
+    {
+      "question": "What is the appliance used in BD06?,Azimuth,Rig",
+      "oldintent": "Azimuth",
+      "newintent": "",
+      "comment": "intent for appliance used for drilling is rig",
+      "processed":false
+    },
+    {
+      "question": "Where is the hydrocarbon located for well 210/30a-4X?",
+      "oldintent": "TotalDepth",
+      "newintent": "",
+      "comment": "intent is incorrect",
+      "processed":false
+    }
+  ],
+  "indents": [
+    {
+      "id": "1",
+      "name": "AbandonmentDate"
+    },
+    {
+      "id": "2",
+      "name": "APINumber"
+    },
+    {
+      "id": "3",
+      "name": "CoreType"
+    },
+    {
+      "id": "4",
+      "name": "CoreDiameter"
+    },
+    {
+      "id": "5",
+      "name": "CoreLength"
+    },
+    {
+      "id": "6",
+      "name": "CoreLithology"
+    }
+  ],
+  "result": [
+    {
+      "question": "Tell me the total depth of 210/3a-4Z well?",
+      "oldintent": "Allwells",
+      "newintent": [
+        "AbandonmentDate",
+        "APINumber"
+      ],
+      "comment": "intent is wrong"
+    },
+    {
+      "question": "What is the appliance used in BD06?,Azimuth,Rig",
+      "oldintent": "Azimuth",
+      "newintent": [
+        "CoreType",
+        "CoreDiameter"
+      ],
+      "comment": "intent for appliance used for drilling is rig"
+    },
+    {
+      "question": "Where is the hydrocarbon located for well 210/30a-4X?",
+      "oldintent": "TotalDepth",
+      "newintent": [
+        "CoreLength",
+        "CoreLithology"
+      ],
+      "comment": "intent is incorrect"
+    }
+  ]
+}

@@ -1,27 +1,80 @@
 <div style="margin-top:7%">
-  <table class="table table-condensed ">
-    <tr>
-      <th *ngFor="let heading of csvHeader">
-        {{ heading }}
-      </th>
-    </tr>
-    <tr *ngFor="let x of csvData;let rowIndex = index" >
-      <td>
-        {{ rowIndex + 1}}
-      </td>
-      <td *ngFor="let y of x">{{ y }}</td>
-      <td>
-        <button class="btn btn-success" (click)="approveRow(rowIndex)">
-          <span class="glyphicon glyphicon-ok"></span>
-        </button>
-        <button class="btn btn-danger" (click)="deleteRow(rowIndex)">
-          <span class="glyphicon glyphicon-remove"></span>
-        </button>
-      </td>
-    </tr>
-  </table>
-  <div class="col-md-4">
-    <button class="btn btn-primary" (click)="generateCSV()">Generate CSV </button>
+  <p id="wtf">this is tihs</p>
+  
+ 
+  <div class="form-group">
+    <label for="single">single</label>
+    <input type="file" class="form-control" name="single" ng2FileSelect [uploader]="uploader" />    
+    <button type="button" class="btn btn-success btn-s"
+    (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+    <span class="glyphicon glyphicon-upload"></span> Upload all
+  </button>
+  <div class="progress" style="">
+    <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
   </div>
 </div>
 
+<table class="table table-condensed">
+  <thead style="color:white;background-color:darkslateblue">
+    <tr>
+      <th>S.No</th>
+      <th>Question</th>
+      <th>Old Intent</th>
+      <th>New Intent </th>
+      <!-- <th>New Intent 2</th>           -->
+      <th>Comment</th>
+      <!-- <th>Entity</th> -->
+      <th>Actions</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of feedback | paginate: { itemsPerPage: 10, currentPage: pppp, id:'fourth'} ;let i = index ">
+      <td>
+        {{ i + 1 }}
+      </td>
+      <td>
+        {{ x.question }}
+      </td>
+      <td>
+        {{ x.oldintent }}
+      </td>
+      <td>
+        <!-- <select [(ngModel)]="selected[i]" class="form-control"  name={{i}}>
+          <option value="" selected>None</option>
+          <option *ngFor="let indent of indents;let j = index" [value]="indent">{{ indent }}</option> 
+        </select> 
+        <span class="glyphicon glyphicon-add"></span> -->
+        <ss-multiselect-dropdown [options]="myOptions" [(ngModel)]="selected[i]" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
+      </td>
+      
+      <!-- <td>
+        <select [(ngModel)]="selected2[i]" class="form-control"  name={{i}}>
+          <option value="" selected>None</option>
+          <option *ngFor="let indent of indents;let j = index" [value]="indent">{{ indent }}</option> 
+        </select> 
+        <dropdown-multiselect
+        [(ngModel)]="dropdownModel">
+      </dropdown-multiselect>
+      <span class="glyphicon glyphicon-add"></span>
+    </td> -->
+    <td>
+      {{ x.comment }}
+    </td>
+    <td>
+      
+      <button class="btn btn-success" (click)="approveRow(i)">
+        <span class="glyphicon glyphicon-ok"></span>
+      </button> 
+      <button class="btn btn-danger" (click)="deleteRow(i)"> 
+        <span class="glyphicon glyphicon-remove"></span> 
+      </button>
+    </td>
+  </tbody>
+</table>
+<div class="col-md-12 col-lg-12 col-sm-12" align="center">
+  <pagination-controls (pageChange)="pppp = $event"  id="fourth"></pagination-controls>
+</div>  
+<div class="col-md-12" align="center">
+  <button class="btn btn-primary" (click)="sendjson()">Submit</button>
+</div>
+</div>   

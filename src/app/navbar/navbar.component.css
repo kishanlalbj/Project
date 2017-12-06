@@ -1,8 +1,7 @@
-
+/*
 
 .navbar {
 	background-color: #ffffff;
-	/*background: transparent;*/
 	border-style: none;
 	border-color: #fff;
 	box-shadow:  0 4px 8px 0 rgba(0,0,0,0.3);
@@ -30,9 +29,7 @@
 .navbar-brand{
 	padding: 0;
 }
-/*.and{
-	margin-top: 25px;
-}*/
+
 a:hover{
 	text-decoration: none;
 	color: black;
@@ -43,12 +40,79 @@ a:hover{
 	font-size: 1.15em;
 }
 .glyphicon {
-  font-size: 1.15em;  /* padding-left: 5px; */
-  /* background-color: cornflowerblue; */
+  font-size: 1.15em;  
+  
+}
+*/
+.navbar {
+	background-color: #ffffff;
+	/*background: transparent;*/
+	border-style: none;
+	border-color: #fff;
+	box-shadow:  0 4px 8px 0 rgba(0,0,0,0.3);
+}
+.navbar-nav{
+	padding:13px;
+	line-height: 80px;
 }
 
+.navbar-brand{
+	padding: 25px;
+	height: 80px;
+	line-height: 80px;
+	overflow: hidden;
+}
+#menu {
+	background: transparent;
+	border: 0;
+	padding-top: 20px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: black;
+}
+#wiprologo {
+	margin-top: -0%;
+	width: 40%;
+	border-right: solid #e2e2e2;
+	border-right-width: 0px;
+}
+#watsonlogo{
+margin-top:-17%;
+width:25%;	
+}
+.bar1 {
+	margin: 25% 0%;
+	transition: 0.3s;
+}
+
+.bar2 {
+	margin: 25% 0%;
+	transition: 0.3s;
+}
+
+.bar3 {
+	margin: 25% 0%;
+	transition: 0.3s;
+}
+/*#myNav>ul>li>a {
+	font-family: 'Open Sans', sans-serif;
+	font-size:110%;
+	color:#000000;
+	font-weight: bold;
+}*/
 #title {
 	font-family: 'Vollkorn SC', serif;
 	color:skyblue;
+	font-size:"100%";
+	margin-top: 10%;
 }
+
+@media screen and (min-width: 1099px) {
+   #myNav {
+        display:hidden;
+    }
+}
+
+
 

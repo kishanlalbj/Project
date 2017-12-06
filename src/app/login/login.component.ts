@@ -14,8 +14,8 @@ export class LoginComponent{
     admin_password = "qwerty";
     admin2_username = "admin2";
     admin2_password = "asdfgh";
-    user1_username = "kishan01";
-    user1_password = "password";
+    user1_username = "guest";
+    user1_password = "guest";
     user2_username = "navan01";
     user2_password = "password2";
 

@@ -1,7 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { ChangeDetectorRef } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Component, OnInit,ElementRef } from '@angular/core';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
+import { ChangeDetectorRef, ViewChild } from '@angular/core';
 import { CsvgeneratorService } from '../csvgenerator.service';
+import { DataService } from "../data.service";
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+import { FormBuilder, FormGroup, Validators, FormControl } from "@angular/forms";
+// import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms'
+// import { IDropdownItem } from 'ng2-dropdown-multiselect';
+import * as $ from 'jquery';
+import {
+  Ng4FilesStatus,
+  Ng4FilesSelected
+} from 'angular4-files-upload';
+import { FileUploader } from 'ng2-file-upload';
+
+
 
 @Component({
   selector: 'app-admin',
@@ -9,74 +23,93 @@ import { CsvgeneratorService } from '../csvgenerator.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-
-
+  
+  feedback:any = [];
+  optionsModel: any[];
+  myOptions: IMultiSelectOption[];
+  pppp:number;
+  public selectedFiles;
+  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/api/file'});
   ngOnInit() {
+
+    this.pppp = 1;
+    this.myOptions = [
+      { id: 1, name: 'Option 1' },
+      { id: 2, name: 'Option 2' },
+      { id:3,  name:'Option 3'}
+  ]
+
+    this.dataservice.getfeedback().subscribe((feedback:Response) =>{
+      this.feedback = feedback.json();
+      console.log(this.feedback[0].comment);
+    })
+    
+    this.dataservice.getindent().subscribe((indents:Response) =>{
+      this.myOptions = indents.json();
+      console.log(this.myOptions);
+    })
   }
 
-
-    csvUrl: string = '../../assets/sample01.csv';  
-  csvData: any[] = [];
-  csvHeader: any[] = [];
-  approvedCsv:any[] = [];
+  onChange() {
+    // console.log(this.selected);
+} 
   index:number = 1;
-  constructor (private http: Http,private changeDetectorRef: ChangeDetectorRef,private csvgen: CsvgeneratorService) {
-  this.readCsvData();
+  indents:any = [];
+  selected:any = [];
+  private elem: ElementRef;
+  toserver:any = [];
+
+  
+  
+  constructor (private http: Http,private changeDetectorRef: ChangeDetectorRef,private csvgen: CsvgeneratorService,private dataservice:DataService) {
+    // this.readCsvData();
+  
   }
+  
+  
   deleteRow(index) {
     console.log(index);
-    console.log(this.csvData[index]);
-    this.csvData.splice(index, 1);
+    console.log(this.feedback[index]);
+    this.feedback.splice(index, 1);
     this.changeDetectorRef.detectChanges();
   }
+  
+  
   approveRow(index) {
-    console.log(index);
-    // console.log(JSON.stringify(this.csvData[index]));
-    this.approvedCsv.push(JSON.parse(JSON.stringify(this.csvData[index])));
-    this.csvData.splice(index,1);
-    console.log("Approved CSV",this.approvedCsv);
+    console.log("selected indents for row " + index + "****",this.selected[index]);
+    console.log("selected length",this.selected[index][0]);
+    let indent = [];
+    
+    for(let i = 0;i<=this.selected[index].length-1;i++) {
+      console.log("i ",i);
+      console.log("final",this.myOptions[this.selected[index][i]-1].name);
+    
+      indent.push(this.myOptions[this.selected[index][i]-1].name);
+    }
+    console.log(indent);
+    
+    this.selected[index] = [];
+    this.feedback[index].newintent = indent;
+    this.toserver.push(this.feedback[index]);
+    
+   
+    // let indent = [];
+    // indent.push(this.selected[index]);
+    // indent.push(this.selected2[index]);
+    // this.feedback[index].newintent = indent;
+    // this.toserver.push(this.feedback[index]);
+    // this.selected[index] = "";
+    // this.selected2[index] = "";
+    this.feedback.splice(index,1);
     this.changeDetectorRef.detectChanges();   
   }
-  generateCSV() {
-      this.csvgen.downloadFile(this.approvedCsv);    
-  }
-  readCsvData() {
-    this.http.get(this.csvUrl)
-    .subscribe(
-      data => this.extractData(data),
-      err => this.handleError(err)
-    );
-  }
-  private extractData(res: Response) {
-    let csvData = res['_body'] || '';
-    let allTextLines = csvData.split(/\r\n|\n/);
-    let headers = allTextLines[0].split(',');
-    this.csvHeader = headers;
-    console.log("Headers",headers);
-    let lines = [];
-    for ( let i = 1; i < allTextLines.length; i++) {
-        // split content based on comma
-        let data = allTextLines[i].split(',');
-        if (data.length == headers.length) {
-            let tarr = [];
-            for ( let j = 0; j < headers.length; j++) {
-                tarr.push(data[j]);
-            }
-            lines.push(tarr);
-        }
-    }
-    this.csvData = lines;
-    // console.log(this.csvData[0]);
-    this.csvHeader.unshift('S.No');
-    this.csvHeader.push('Actions'); 
-  }
-  private handleError (error: any) {
-   
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); 
-    return errMsg;
+  
+  sendjson() {
+    console.log(this.toserver);
+    this.dataservice.sendapproved(this.toserver).subscribe((res:Response)=> {
+      console.log("response sent");
+    })
   }
 
+  
 }
