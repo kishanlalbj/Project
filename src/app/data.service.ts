@@ -12,6 +12,14 @@ export class DataService {
 
   // private subject = new Subject<any>();
   private subject = new BehaviorSubject("");
+  private resultdata = new BehaviorSubject([]);
+  public beSubject =  new BehaviorSubject(null);
+  public filterdata  = this.beSubject.asObservable();
+
+
+  public dataComm(data){
+    this.beSubject.next(data);
+  }
 
   getQuestion(): Observable<any>
   {
@@ -22,19 +30,31 @@ export class DataService {
       this.subject.next(user);
   }
 
+  setResultData(result:any):void{
+    this.resultdata.next(result);
+  }
+
+  getResultData(): Observable<any>{
+    return this.resultdata.asObservable();
+  }
+
+
   getData(question) {
 
         return this.http.get('http://localhost:8080/data?q='+question);
-    //    return this.http.get('http://localhost:3000/process/?question='+question);
+        // return this.http.get('http://localhost:3000/process/?question='+question);
 
   }
 
   getfeedback() {
-      return this.http.get('http://localhost:8080/feedback?processed=false');
+    //   return this.http.get('http://localhost:3000/getFeedback');
+    return this.http.get('http://localhost:8080/feedback');
   }
 
   getindent() {
-      return this.http.get('http://localhost:8080/indents');
+    //   return this.http.get('http://localhost:3000/intent');
+    return this.http.get('http://localhost:8080/indents');
+    
   }
   sendfeedback(feed) {
       console.log(feed);
@@ -42,7 +62,8 @@ export class DataService {
         {
             'Content-Type': 'application/json'
         });
-    return this.http.post("http://localhost:8080/feedback",feed,{headers:headers});
+    // return this.http.post("http://localhost:3000/feedback",feed,{headers:headers});
+   return this.http.post("http://localhost:8080/feedback",feed,{headers:headers});
   }
 
   sendapproved(approved) {

@@ -16,10 +16,8 @@ import { AdminComponent } from './admin/admin.component';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { Ng4FilesModule } from 'angular4-files-upload';
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
-
-
-
-
+import { FetchDataService } from './fetch-data.service';
+import { FilterComponent } from './search/filter/filter.component';
 import { KeyPipe } from './key.pipe';
 
 
@@ -41,7 +39,8 @@ const routes: Routes = [
 	SearchComponent,
 	AdminComponent,
 	KeyPipe,
-	FileSelectDirective
+	FileSelectDirective,
+	FilterComponent
 
 	],
 
@@ -56,7 +55,7 @@ const routes: Routes = [
 	MultiselectDropdownModule,
 	Ng4FilesModule 
 	],
-	providers: [DataService,CsvgeneratorService],
+	providers: [DataService,CsvgeneratorService,FetchDataService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

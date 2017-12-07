@@ -1,0 +1,52 @@
+.wrapper {
+     width : 100%;
+     height:100%;
+     background: #1f6fb4;
+     font-family: 'Nunito', sans-serif;
+     color: white;
+     /* padding: 2% 0 1% 3%; */
+     /* border-radius: 2%; */
+     float:left;
+     margin-top:28%;
+}
+.horizontalLine{
+  color: white !important;
+  /*padding-right: 120px;*/
+  /* width:130px; */
+}
+.heading{
+  text-align: center;;
+}
+.filter {
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+.category{
+    margin-top: 20px;
+}
+
+.select:hover{
+    background: white;
+    color:#002766;
+}
+
+.select{
+    height:20%;
+    margin-left: 12%;
+    margin-right: 5%;
+    padding-left:4%;
+    border-bottom-left-radius: 4%;
+    border-top-left-radius: 4%;
+    border-bottom-right-radius: 4%;
+    border-top-right-radius: 4%;
+}
+
+.filterResetBtn{
+    float:right;
+    margin-right: 43%;
+    margin-top: 10%;
+    background-color: #c2c2a3;
+    /*margin-left: auto;*/
+    margin-bottom: 50px;
+}
