@@ -1,38 +1,49 @@
 {
   "data": [
-
     {
-    "Type": "Passage",
-    "Document": ["N/A", "N/A", "N/A","N/A","N/A"],
-    "Result": [
-        "dip of previous drilled 210/30a wells Evaluation of the reservoir with conventional coring, logging tools, formation pressures and fluid samples to be taken. Well Type: Deviated Appraisal.\n\nOperator: Sterling Resources.",
-         "with conventional coring, logging tools, formation pressures and fluid samples to be taken. Well Type: Deviated Appraisal.\n\nOperator: Sterling Resources.\n\nLocation: UK offshore-Northern North Sea. Basin Name: East Shetland.", 
-         "number 4",
-         "number 5",
-         "of the reservoir with conventional coring, logging tools, formation pressures and fluid samples to be taken. Well Type: Deviated Appraisal. Operator: Sterling Resources. Location: UK offshore-Northern North Sea.",         
-         
-        ],
-       "Question":"210/30a-4X"
-},
-{
-  "Type": "Passage", 
-  "Document": [
-    "210_30A-4X.pdf#page=2", "210_30A-4X.pdf#page=2", "210_30A-4X.pdf#page=3"],
-  "Result": [
-    ".\n\nThe source of the hydrocarbons are from the encasing Kimmeridge Clay black shales. The discovery is adjacent to, and along trend from the Tern and South Cormorant Fields, for which the Kimmeridge source is an effective source.",
-     "source is an effective source.\n\nThree channel belts have been broadly mapped over the terrace slope area with a potential fan complex identified at the base of the relay ramp.\n\nThe location", "Well reached TD of 10614 ft (-10497.2 ft TVDSS) on 31st of May 2011. 3. WELL DATA SUMMARY Well: 210/30a-4X. Pre-spud designation: Drill a deviated well as sidetrack from the donor well 210/30a-4 to establish the presence of hydrocarbons"
-     ],
-     "Question":"210/30a-4Y"
-    },
-    {
-      "Type": "Fail", 
+      "Type": "Fail",
       "Document": "",
       "Result": "Please rephrase your query",
-      "Question":"asdf"
+      "Question": "asdf"
     },
-      
-  
-
+    {
+      "Type": "Passage",
+      "Document": [
+        "N/A",
+        "N/A",
+        "N/A",
+        "N/A",
+        "N/A"
+      ],
+      "Result": [
+        "dip of previous drilled 210/30a wells Evaluation of the reservoir with conventional coring, logging tools, formation pressures and fluid samples to be taken. Well Type: Deviated Appraisal.\n\nOperator: Sterling Resources.",
+        "with conventional coring, logging tools, formation pressures and fluid samples to be taken. Well Type: Deviated Appraisal.\n\nOperator: Sterling Resources.\n\nLocation: UK offshore-Northern North Sea. Basin Name: East Shetland.",
+        "of the reservoir with conventional coring, logging tools, formation pressures and fluid samples to be taken. Well Type: Deviated Appraisal. Operator: Sterling Resources. Location: UK offshore-Northern North Sea.",
+        "number 4",
+        "number 5"
+      ],
+      "Question": "210/30a-4X"
+    },
+    {
+      "Type": "Passage",
+      "Document": [
+        "210_30A-4X.pdf#page=2",
+        "210_30A-4X.pdf#page=2",
+        "210_30A-4X.pdf#page=3"
+      ],
+      "Result": [
+        ".\n\nThe source of the hydrocarbons are from the encasing Kimmeridge Clay black shales. The discovery is adjacent to, and along trend from the Tern and South Cormorant Fields, for which the Kimmeridge source is an effective source.",
+        "source is an effective source.\n\nThree channel belts have been broadly mapped over the terrace slope area with a potential fan complex identified at the base of the relay ramp.\n\nThe location",
+        "Well reached TD of 10614 ft (-10497.2 ft TVDSS) on 31st of May 2011. 3. WELL DATA SUMMARY Well: 210/30a-4X. Pre-spud designation: Drill a deviated well as sidetrack from the donor well 210/30a-4 to establish the presence of hydrocarbons"
+      ],
+      "Question": "210/30a-4Y"
+    },
+    {
+      "Type": "Fail",
+      "Document": "",
+      "Result": "Please rephrase your query",
+      "Question": "asdf"
+    },
     {
       "Intent": "AllWells",
       "Result": [
@@ -739,19 +750,25 @@
       "question": "Tell me the total depth of 210/3a-4Z well?",
       "oldintent": "Allwells",
       "comment": "intent is wrong",
-      "processed":false
+      "processed": false
     },
     {
       "question": "What is the appliance used in BD06?,Azimuth,Rig",
       "oldintent": "Azimuth",
       "comment": "intent for appliance used for drilling is rig",
-      "processed":false
+      "processed": false
     },
     {
       "question": "Where is the hydrocarbon located for well 210/30a-4X?",
       "oldintent": "TotalDepth",
       "comment": "intent is incorrect",
-      "processed":false
+      "processed": false
+    },
+    {
+      "question": "210/31-4X",
+      "oldintent": "",
+      "comment": "this is passage",
+      "processed": false
     }
   ],
   "indents": [
@@ -781,32 +798,109 @@
     }
   ],
   "result": [
-    {
-      "question": "Tell me the total depth of 210/3a-4Z well?",
-      "oldintent": "Allwells",
-      "newintent": [
-        "AbandonmentDate",
-        "APINumber"
-      ],
-      "comment": "intent is wrong"
-    },
-    {
-      "question": "What is the appliance used in BD06?,Azimuth,Rig",
-      "oldintent": "Azimuth",
-      "newintent": [
-        "CoreType",
-        "CoreDiameter"
-      ],
-      "comment": "intent for appliance used for drilling is rig"
-    },
-    {
-      "question": "Where is the hydrocarbon located for well 210/30a-4X?",
-      "oldintent": "TotalDepth",
-      "newintent": [
-        "CoreLength",
-        "CoreLithology"
-      ],
-      "comment": "intent is incorrect"
-    }
+    [
+      {
+        "question": "Tell me the total depth of 210/3a-4Z well?",
+        "oldintent": "Allwells",
+        "comment": "intent is wrong",
+        "processed": false
+      },
+      {
+        "question": "What is the appliance used in BD06?,Azimuth,Rig",
+        "oldintent": "Azimuth",
+        "comment": "intent for appliance used for drilling is rig",
+        "processed": false
+      },
+      {
+        "question": "Where is the hydrocarbon located for well 210/30a-4X?",
+        "oldintent": "TotalDepth",
+        "comment": "intent is incorrect",
+        "processed": false
+      },
+      {
+        "question": "210/31-4X",
+        "oldintent": "",
+        "comment": "this is passage",
+        "processed": false
+      }
+    ],
+    [
+      {
+        "question": "Tell me the total depth of 210/3a-4Z well?",
+        "oldintent": "Allwells",
+        "comment": "intent is wrong",
+        "processed": false
+      },
+      {
+        "question": "What is the appliance used in BD06?,Azimuth,Rig",
+        "oldintent": "Azimuth",
+        "comment": "intent for appliance used for drilling is rig",
+        "processed": false
+      },
+      {
+        "question": "Where is the hydrocarbon located for well 210/30a-4X?",
+        "oldintent": "TotalDepth",
+        "comment": "intent is incorrect",
+        "processed": false
+      },
+      {
+        "question": "210/31-4X",
+        "oldintent": "",
+        "comment": "this is passage",
+        "processed": false
+      }
+    ],
+    [
+      {
+        "question": "Tell me the total depth of 210/3a-4Z well?",
+        "oldintent": "Allwells",
+        "comment": "intent is wrong",
+        "processed": false
+      },
+      {
+        "question": "What is the appliance used in BD06?,Azimuth,Rig",
+        "oldintent": "Azimuth",
+        "comment": "intent for appliance used for drilling is rig",
+        "processed": false
+      },
+      {
+        "question": "Where is the hydrocarbon located for well 210/30a-4X?",
+        "oldintent": "TotalDepth",
+        "comment": "intent is incorrect",
+        "processed": false
+      },
+      {
+        "question": "210/31-4X",
+        "oldintent": "",
+        "comment": "this is passage",
+        "processed": false
+      }
+    ],
+    [
+      {
+        "question": "Tell me the total depth of 210/3a-4Z well?",
+        "oldintent": "Allwells",
+        "comment": "intent is wrong",
+        "processed": false
+      },
+      {
+        "question": "What is the appliance used in BD06?,Azimuth,Rig",
+        "oldintent": "Azimuth",
+        "comment": "intent for appliance used for drilling is rig",
+        "processed": false
+      },
+      {
+        "question": "Where is the hydrocarbon located for well 210/30a-4X?",
+        "oldintent": "TotalDepth",
+        "comment": "intent is incorrect",
+        "processed": false
+      },
+      {
+        "question": "210/31-4X",
+        "oldintent": "",
+        "comment": "this is passage",
+        "processed": false
+      }
+    ]
   ]
 }

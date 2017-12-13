@@ -14,6 +14,23 @@ var storage = multer.diskStorage({ //multers disk storage settings
 	}
 });
 
+
+var users = [ 
+    {
+    id:1,
+    admin:false,
+    username:"guest",
+    password:"guest"
+
+},
+{
+    id:2,
+    admin:true,
+    username:"admin",
+    password:"admin"
+}
+]
+
 var upload = multer({ //multer settings
 				storage: storage
 			}).single('file');
@@ -69,6 +86,28 @@ router.get('/movies',function(req,res) {
 		} 
 		res.send(movies);
 	})
+})
+
+
+
+router.post('/login',function(req,res) {
+	if(req.body.name && req.body.password) {
+		var name = req.body.name;
+		var password = req.body.password;
+	}
+
+	var user = users[_.findIndex(users, {name: name})];
+	if( ! user ){
+	  res.status(401).json({message:"no such user found"});
+	}
+	if(user.password === req.body.password) {
+		// from now on we'll identify the user by the id and the id is the only personalized value that goes into our token
+		var payload = {id: user.id};
+		var token = jwt.sign(payload, jwtOptions.secretOrKey);
+		res.json({message: "ok", token: token});
+	  } else {
+		res.status(401).json({message:"passwords did not match"});
+	  }
 })
 
 module.exports = router;

@@ -40,8 +40,8 @@ a:hover{
 	font-size: 1.15em;
 }
 .glyphicon {
-  font-size: 1.15em;  
-  
+	font-size: 1.15em;  
+	
 }
 */
 .navbar {
@@ -50,6 +50,7 @@ a:hover{
 	border-style: none;
 	border-color: #fff;
 	box-shadow:  0 4px 8px 0 rgba(0,0,0,0.3);
+	font-family: 'open_sansregular',sans-serif;
 }
 .navbar-nav{
 	padding:13px;
@@ -78,8 +79,8 @@ a:hover{
 	border-right-width: 0px;
 }
 #watsonlogo{
-margin-top:-17%;
-width:25%;	
+	margin-top:-17%;
+	width:25%;	
 }
 .bar1 {
 	margin: 25% 0%;
@@ -102,17 +103,37 @@ width:25%;
 	font-weight: bold;
 }*/
 #title {
-	font-family: 'Vollkorn SC', serif;
-	color:skyblue;
+	font-family: 'open_sansregular', serif;
+	color:cornflowerblue;
 	font-size:"100%";
 	margin-top: 10%;
+	font-weight: bolder;
 }
 
 @media screen and (min-width: 1099px) {
-   #myNav {
-        display:hidden;
-    }
+	#myNav {
+		display:hidden;
+	}
 }
+
+.navbar-text {
+	font-size:200%;
+	color:cornflowerblue;
+	/* font-weight: bolder; */
+}
+
+@media only screen and (max-width: 1060px) {
+	.navbar-text {
+		display:none;
+	}
+}
+
+.navbar-nav[_ngcontent-c1] {	
+	/*padding: 13px;*/	
+	padding-right: 0px;	
+	/* line-height: 80px;	 */
+}  
+
 
 
 

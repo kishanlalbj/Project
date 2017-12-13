@@ -9,16 +9,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { CsvgeneratorService } from "./csvgenerator.service";
-import { DataService } from './data.service';
+import { DataService } from './services/data.service';
 import { SearchComponent } from './search/search.component';
 import { AdminComponent } from './admin/admin.component';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
-import { Ng4FilesModule } from 'angular4-files-upload';
-import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
-import { FetchDataService } from './fetch-data.service';
+// import { Ng4FilesModule } from 'angular4-files-upload';
+import { FileSelectDirective, FileDropDirective, FileUploadModule } from 'ng2-file-upload';
 import { FilterComponent } from './search/filter/filter.component';
-import { KeyPipe } from './key.pipe';
+import { KeyPipe } from './pipes/key.pipe';
 
 
 
@@ -39,7 +37,6 @@ const routes: Routes = [
 	SearchComponent,
 	AdminComponent,
 	KeyPipe,
-	FileSelectDirective,
 	FilterComponent
 
 	],
@@ -47,15 +44,17 @@ const routes: Routes = [
 	imports: [
 	RouterModule.forRoot(routes),
 	BrowserModule,
+	FileUploadModule,	
 	BrowserAnimationsModule,
 	HttpModule,
 	FormsModule,
 	ReactiveFormsModule,
 	NgxPaginationModule,
 	MultiselectDropdownModule,
-	Ng4FilesModule 
+	// Ng4FilesModule 
 	],
-	providers: [DataService,CsvgeneratorService,FetchDataService],
+	exports:[FileUploadModule],
+	providers: [DataService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

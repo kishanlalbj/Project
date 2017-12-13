@@ -1,17 +1,14 @@
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Component, OnInit, ElementRef, EventEmitter } from '@angular/core';
+import { Component, OnInit,ElementRef } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
-import { ChangeDetectorRef, ViewChild, Output } from '@angular/core';
-import { CsvgeneratorService } from '../csvgenerator.service';
-import { DataService } from "../data.service";
+import { ChangeDetectorRef, ViewChild } from '@angular/core';
+import { DataService } from "../services/data.service";
 import { IMultiSelectOption ,IMultiSelectSettings} from 'angular-2-dropdown-multiselect';
 import { FormBuilder, FormGroup, Validators, FormControl } from "@angular/forms";
 import {PaginationInstance} from 'ngx-pagination';
 import * as $ from 'jquery';
-import {
-  Ng4FilesStatus,
-  Ng4FilesSelected
-} from 'angular4-files-upload';
+
 import { FileUploader } from 'ng2-file-upload';
 
 
@@ -22,9 +19,10 @@ import { FileUploader } from 'ng2-file-upload';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-
- 
+  
+  loading:boolean;
+  error:boolean;
+  feedback_final = [];
   feedback:any = [];
   anotherq:any=[];
   optionsModel: any[];
@@ -42,31 +40,38 @@ export class AdminComponent implements OnInit {
   question2:any=[];
 	intent1:any;
   intent2:any;
-
+  datasent:boolean ;
+  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/api/file'});  
   public config: PaginationInstance = {
     id: 'advanced',
-    itemsPerPage: 2,
+    itemsPerPage: 10,
     currentPage: 1
-};
-
-@Output() pageChange: EventEmitter<number>;
-
-pageChanged(ev) {
-  console.log('change to page', ev);
-  this.config.currentPage = ev;
-  this.anotherq[ev] = false;
-}
-
-
- 
+  };
   
-
-  
-
-  public uploader:FileUploader = new FileUploader({url:'http://localhost:3000/api/file'});
-  ngOnInit() {
+  constructor (private router:Router,private http:Http,private changeDetectorRef: ChangeDetectorRef,private dataservice:DataService) {
     
-   
+    
+  }
+  
+  refresh() {
+    // window.location.reload();  
+   this.ngOnInit();
+  }
+  
+  gotoSearch() {
+    // alert("called");
+    this.router.navigateByUrl('/home');
+  }
+  
+  onPageChange(number: number) {
+    console.log('change to page', number);
+    this.config.currentPage = number;
+  }
+  
+  
+  ngOnInit() {
+    this.loading = true;
+    this.error = false;
     this.pppp = 1;
     this.myOptions = [{ id:1 ,name:'Option1'},{ id:2 ,name:'Option2'}]
     
@@ -82,19 +87,27 @@ pageChanged(ev) {
     
     
     this.dataservice.getfeedback().subscribe((feedback:Response) =>{
+      this.loading = false;
       this.feedback = feedback.json();
-
-      for(let i = 0;i<=this.feedback.length;i++) {
-
+      this.error = false;
+    
+      this.feedback_final = this.feedback;
+      console.log(feedback.json())
+      
+      for(let i = 0;i<=this.feedback.length-1;i++) {
+        
         this.anotherq[i] = false;
       }
+    },(error)=> {
+
+      // alert(this.error);
+      // alert(this.loading);
+      this.error = true;
+      this.loading = false;
     })
     
     this.dataservice.getindent().subscribe((intent:Response) =>{
-      this.myOptions = intent.json();
-      // console.log("Intents from server",intent.json().intents);
-      // this.myOptions = intent.json().intents;
-      // console.log(this.myOptions);
+      this.myOptions = intent.json().intents;
     })
   }
   
@@ -102,31 +115,27 @@ pageChanged(ev) {
     // console.log(this.selected);
   } 
   
-  constructor (private http:	 Http,private changeDetectorRef: ChangeDetectorRef,private csvgen: CsvgeneratorService,private dataservice:DataService) {
-    
-    
-  }
+  
   
   toogle(index) {
-    console.log("toggled index",index);
-    console.log("current page",this.config.currentPage);
-    console.log("that index",(this.config.currentPage -1)*this.config.itemsPerPage + 1);
+    console.log(index);
+    this.anotherq[index-1] = !this.anotherq[index-1];
     console.log(this.anotherq);
-    this.anotherq[index] = !this.anotherq[index];
   }
   
   deleteRow(index) {
-    console.log("deleted index",index);
+    console.log(index);
     // console.log(this.feedback[index]);
-    // this.showmessage[index] = 1;
-    this.feedback.splice(index, 1);
+    //this.showmessage[index] = 1;
+    console.log(this.feedback[index-1]);
+    this.feedback.splice(index-1, 1);
+    this.toserver.push(this.feedback[index-1])
     this.changeDetectorRef.detectChanges();
   }
   
   approveRow(index) {
-    console.log("approved index",index);
-    // console.log(this.feedback);
-    console.log(this.selected[index]);
+    console.log(index);
+    let indent = []; 
     for(let i = 0;i<=this.selected[index].length-1;i++) {
       this.intent1 = this.myOptions[this.selected[index][i]-1].name;
       if(this.selected2[index] != undefined) {
@@ -136,15 +145,15 @@ pageChanged(ev) {
         this.intent2 = "";	
       }
     }
-  
-    this.feedback[index].newintent1 = this.intent1;
+    
+    this.feedback[index-1].newintent1 = this.intent1;
     if(this.intent2 == undefined) {
       this.intent2 = "";
     }
-    this.feedback[index].newintent2 = this.intent2;
-    this.feedback[index].question2 = this.question2[index]; 
-    this.feedback[index].processed = "TRUE";
-    this.toserver.push(this.feedback[index]);
+    this.feedback[index-1].newintent2 = this.intent2;
+    this.feedback[index-1].question2 = this.question2[index]; 
+    this.feedback[index-1].processed = "TRUE";
+    this.toserver.push(this.feedback[index-1]);
     this.showmessage[index] = 1;
     this.changeDetectorRef.detectChanges();   
   }
@@ -153,11 +162,11 @@ pageChanged(ev) {
     console.log(this.feedback);
     this.dataservice.sendapproved(this.feedback).subscribe((res:Response)=> {
       console.log("response sent");
-      // this.ngOnInit();
+      this.datasent = true;
+      
     },(error) =>{
-      // window.location.reload();   
+      this.datasent = false;
+      console.log(error);   
     })
   }
-  
-  
 }

@@ -2,7 +2,7 @@ import { Observer } from 'rxjs/Observer';
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { ChangeDetectorRef } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../services/data.service';
 import { Subscription } from 'rxjs/Subscription';
 import {Router} from '@angular/router';
 import "rxjs/Rx";

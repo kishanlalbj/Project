@@ -1,6 +1,5 @@
 import { Component, OnInit,AfterContentInit,Input } from '@angular/core';
-import { FetchDataService } from '../../fetch-data.service';
-import { DataService } from '../../data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-filter',
@@ -8,14 +7,14 @@ import { DataService } from '../../data.service';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent {
-
+@Input() hidden:boolean;
     sampleObjectData: any[];
     assetNames: Array<any>;
     fieldNames: Array<any>;
     regions: Array<any>;
     assetCount: number;
     categories;
-    constructor(private fetchDataService: FetchDataService,private dataservice:DataService) {
+    constructor(private dataservice:DataService) {
     this.categories = ["Asset_Name","FieldName","Region"]
    }
     result: any[];
@@ -30,6 +29,7 @@ export class FilterComponent {
         //   console.log(data);
         // });
       //  this.getData();
+      
     }
 
     getData(){

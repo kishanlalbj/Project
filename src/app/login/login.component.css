@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500); */
 
 .loginPage{
   margin-top: 230px;
@@ -107,7 +107,7 @@ label {
   outline-offset: -2px;
 }
 .panel-login .checkbox input[type="checkbox"]:checked + label::after {
-  font-family: 'FontAwesome';
+  font-family: 'open_sansregular';
   content: "\f00c";
 }
 .panel-login>.panel-heading .tabs{
